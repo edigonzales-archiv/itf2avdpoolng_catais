@@ -88,7 +88,7 @@ public class MOpublic {
 		dbparams.put("host", this.host);        
 		dbparams.put("port", this.port);  
 		dbparams.put("database", this.dbname); 
-		dbparams.put("schema", "av_mopublic");
+		dbparams.put("schema", "av_mopublic_meta");
 		dbparams.put("user", this.user);        
 		dbparams.put("passwd", this.pwd); 
 		dbparams.put(PostgisNGDataStoreFactory.VALIDATECONN, true );

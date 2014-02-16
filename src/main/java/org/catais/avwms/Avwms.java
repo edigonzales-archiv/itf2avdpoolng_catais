@@ -72,7 +72,7 @@ public class Avwms {
 					s = conn.createStatement();
 					
 					ResultSet rs = null;
-					this.schema = "av_avwmsde_t";
+					this.schema = "av_avwms_meta";
 					rs = s.executeQuery("SELECT * FROM " + this.schema + "." + this.sqlTable + ";");
 					
 					queries.clear();
