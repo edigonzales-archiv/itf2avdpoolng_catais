@@ -19,6 +19,7 @@ import org.geotools.feature.simple.SimpleFeatureTypeBuilder;
 import org.geotools.feature.simple.SimpleFeatureBuilder;
 import org.geotools.feature.FeatureCollection;
 import org.geotools.feature.FeatureCollections;
+import org.geotools.feature.FeatureIterator;
 import org.geotools.filter.text.cql2.CQL;
 import org.geotools.filter.text.cql2.CQLException;
 //import org.geotools.filter.text.cql2.*;
@@ -55,6 +56,7 @@ import com.vividsolutions.jts.operation.polygonize.*;
 import com.vividsolutions.jts.index.strtree.STRtree;
 import com.vividsolutions.jts.index.SpatialIndex;
 import com.vividsolutions.jts.geom.prep.PreparedPoint;
+import com.vividsolutions.jts.geom.prep.PreparedPolygon;
 import com.vividsolutions.jts.geom.util.LinearComponentExtracter;
 
 import ch.interlis.ili2c.Ili2c;
@@ -623,11 +625,13 @@ public class IliReader {
 	
 	private FeatureCollection areaBuilder(FeatureCollection areaMainCollection, FeatureCollection areaHelperCollection) {
 		
-		FeatureCollection<SimpleFeatureType, SimpleFeature> collection = null;
+        FeatureCollection<SimpleFeatureType, SimpleFeature> collection = null;
+        FeatureCollection<SimpleFeatureType, SimpleFeature> smallAreasColl = null;
 		
 		if(areaMainCollection != null && areaHelperCollection != null) {
 			
 			collection = FeatureCollections.newCollection(areaMainCollection.getID());
+			smallAreasColl = FeatureCollections.newCollection();
 			
 			Polygonizer polygonizer = new Polygonizer();
 			int inputEdgeCount = areaHelperCollection.size();
@@ -641,39 +645,133 @@ public class IliReader {
 				polygonizer.add(g);
 			}
 
-			// Man könnte jetzt noch die nicht kleinen
-			// Zipfel irgendeinem Polygon zuordnen.
-			// Das erste, das das berührt?
-			// Das kleinste?
-			// Was geht am schnellsten?
-
 			ArrayList polys = (ArrayList) polygonizer.getPolygons();
-
-			final SpatialIndex spatialIndex = new STRtree();
-			for (int i=0; i<polys.size();i++) {
-				Polygon p = (Polygon) polys.get(i);
-				spatialIndex.insert(p.getEnvelopeInternal(), p);
+			
+			final SpatialIndex idx = new STRtree();
+			FeatureIterator mt = areaMainCollection.features();
+			while(mt.hasNext()) {
+			    try {
+			        SimpleFeature feat = (SimpleFeature) mt.next();
+			        Geometry point = (Geometry) feat.getAttribute(geomName+"_point");
+			        idx.insert(point.getEnvelopeInternal(), feat);
+			    }
+			    catch (NullPointerException e) {
+			        // Gibts anscheinend in anderen Kantonen.
+			        logger.warn("empty point");
+			    }
+			}
+			mt.close();
+			
+			ArrayList<Polygon> smallAreas = new ArrayList();
+			
+			for (int i=0; i<polys.size(); i++) {
+		        boolean found = false;
+			    Polygon p = (Polygon) polys.get(i);
+			    PreparedPolygon ppoly = new PreparedPolygon(p);
+//			    logger.debug(p.toString());
+			    for (final Object o : idx.query(p.getEnvelopeInternal())) {
+			        SimpleFeature f = (SimpleFeature) o;
+			        // Funktioniert auch intersect? Schneller?
+                    if(ppoly.contains(((Geometry) f.getAttribute(geomName+"_point"))))  {
+//                        logger.info("INNNNNTERSECTS");
+//                        logger.info(f.getAttribute("tid"));
+                        
+                        f.setAttribute(geomName, p);
+                        collection.add(f);
+                        found = true;
+                        break;
+			        }
+			    }
+			    if (!found) {
+//	                logger.warn("Should not reach here:");
+//	                logger.warn(p.toString());
+	                smallAreas.add(p);
+			    }
 			}
 			
-			Iterator kt = areaMainCollection.iterator();
-			while(kt.hasNext()) {
-				SimpleFeature feat = (SimpleFeature) kt.next();
-				Geometry point = (Geometry) feat.getAttribute(geomName+"_point");
-				try {
-					PreparedPoint ppoint = new PreparedPoint(point.getInteriorPoint());
-
-					for (final Object o : spatialIndex.query(point.getEnvelopeInternal())) {
-						Polygon p = (Polygon) o;
-						if(ppoint.intersects(p)) {                                      
-							feat.setAttribute(geomName, p);
-							collection.add(feat);
-						}
-					} 
-				} catch (NullPointerException e) {
-					System.err.println("empty point");
-				}                     
+			// Restflächen, die aufgrund des neu Verknotens entstanden sind,
+			// werden dem Polygon mit der längsten gemeinsamen Kanten zugewiesen.
+			// Mal schauen obs schon hinhaut.
+			boolean repair = true;
+			if (repair) {
+			    // Build spatial index
+			    final SpatialIndex spatialIndex = new STRtree();
+			    FeatureIterator nt = collection.features();
+			    while(nt.hasNext()) {
+			        SimpleFeature feat = (SimpleFeature) nt.next();
+			        Geometry point = (Geometry) feat.getAttribute(geomName);
+			        spatialIndex.insert(point.getEnvelopeInternal(), feat);	      
+			    }
+			    nt.close();
+			    
+			    // find intersecting features and union geometries
+//			    logger.debug("SmallAreas size: ");
+//			    logger.debug(smallAreas.size());
+			    for (int i=0; i<smallAreas.size(); i++) {
+			        Polygon p = smallAreas.get(i);
+		            PreparedPolygon ppoly = new PreparedPolygon(p);
+		            
+		            double length = 0.0;
+		            SimpleFeature feat = null;
+		            
+	                for (final Object o : spatialIndex.query(p.getEnvelopeInternal())) {
+	                    SimpleFeature f = (SimpleFeature) o;
+	                    Geometry g = ((Geometry) f.getAttribute(geomName));
+	                    if (ppoly.intersects(g)) {
+//	                        logger.debug("***************************");
+//	                        logger.debug(p.toString());
+//	                        logger.debug(g.toString());
+	                        Geometry geom = p.intersection(g);
+//	                        logger.debug(geom.toString());
+	                        if (geom instanceof LineString || geom instanceof MultiLineString) {
+//                                logger.debug("gespeichert: " + length);
+//                                logger.debug("aktuell: " + geom.getLength());
+//	                            logger.debug("diff: " + (geom.getLength()-length));
+	                            if (geom.getLength() > length) {
+//	                                logger.debug("grösser");
+	                                length = geom.getLength();
+	                                feat = f;
+	                            }
+	                        }
+	                    }
+//	                    logger.debug("length: ");
+//	                    logger.debug(length);
+	                }
+	                Geometry geomOld = (Geometry) feat.getAttribute(geomName);
+	                Geometry geomNew = geomOld.union(p);
+	                feat.setAttribute(geomName, geomNew);  
+			    }
 			}
-			areaMainCollection.close(kt);
+			
+			
+
+//			final SpatialIndex spatialIndex = new STRtree();
+//			for (int i=0; i<polys.size();i++) {
+//				Polygon p = (Polygon) polys.get(i);
+//				spatialIndex.insert(p.getEnvelopeInternal(), p);
+//			}
+//			
+//			Iterator kt = areaMainCollection.iterator();
+//			while(kt.hasNext()) {
+//				SimpleFeature feat = (SimpleFeature) kt.next();
+//				Geometry point = (Geometry) feat.getAttribute(geomName+"_point");
+//				try {
+//					PreparedPoint ppoint = new PreparedPoint(point.getInteriorPoint());
+//
+//					for (final Object o : spatialIndex.query(point.getEnvelopeInternal())) {
+//						Polygon p = (Polygon) o;
+//						if(ppoint.intersects(p)) {                                      
+//							feat.setAttribute(geomName, p);
+////							collection.add(feat);
+//						}
+//					} 
+//				} catch (NullPointerException e) {
+//					System.err.println("empty point");
+//				}                     
+//			}
+//			areaMainCollection.close(kt);
+			
+			
 		}
 		return collection;
 	}
