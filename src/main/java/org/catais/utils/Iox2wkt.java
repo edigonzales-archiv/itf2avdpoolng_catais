@@ -162,145 +162,193 @@ public class Iox2wkt {
 	
 	public static Geometry polyline2jts(IomObject polylineObj, double maxOverlaps) {
 		
-		return polyline2jts(polylineObj, maxOverlaps, null, null, null, null);
-	}
+	    coords.clear();
+
+	    boolean clipped = polylineObj.getobjectconsistency()==IomConstants.IOM_INCOMPLETE;
+	    for(int sequencei=0; sequencei<polylineObj.getattrvaluecount("sequence"); sequencei++) {
+	        if(!clipped && sequencei>0) {
+	            throw new IllegalArgumentException();
+	        }
+
+	        IomObject sequence=polylineObj.getattrobj("sequence", sequencei);
+	        for(int segmenti=0; segmenti<sequence.getattrvaluecount("segment"); segmenti++) {
+	            IomObject segment=sequence.getattrobj("segment", segmenti);
+	            if(segment.getobjecttag().equals("COORD")) {                                    
+
+	                String c1=segment.getattrvalue("C1");
+	                String c2=segment.getattrvalue("C2");
+	                //String c3=segment.getattrvalue("C3");
+
+	                Coordinate coord = new Coordinate(Double.valueOf(c1), Double.valueOf(c2));
+	                coords.add(coord, false);
+
+	            } else if (segment.getobjecttag().equals("ARC")) {
+	                String a1=segment.getattrvalue("A1");
+	                String a2=segment.getattrvalue("A2");
+	                String c1=segment.getattrvalue("C1");
+	                String c2=segment.getattrvalue("C2");
+	                //String c3=segment.getattrvalue("C3");
+
+	                Coordinate ptStart = coords.getCoordinate(coords.size()-1);
+	                Coordinate ptArc = new Coordinate(Double.valueOf(a1), Double.valueOf(a2));
+	                Coordinate ptEnd = new Coordinate(Double.valueOf(c1), Double.valueOf(c2));
+
+	                interpolateArc(ptStart, ptArc, ptEnd, maxOverlaps);
+
+	            } else {
+	                // custom line form is not supported
+	            }      
+	        }
+	    }
+
+	    Geometry line = null;
+	    // Bei 3D-Koordinaten ergäbe das eben schon noch Sinn.... WAS?
+	    try {
+	        line = new GeometryFactory().createLineString(coords.toCoordinateArray());
+	    } catch (IllegalArgumentException e) {
+	        //e.printStackTrace();
+	        logger.error("not valid linestring");
+	    }
+
+	    return line;
+    }
 	
 	
-	public static Geometry polyline2jts(IomObject polylineObj, double maxOverlaps, FeatureStore<SimpleFeatureType, SimpleFeature>  store, String className, Integer gem_bfs, Integer los) 
-	{	
-		GeometryFactory gf = new GeometryFactory();
-		
-		LineString[] linestrings = null;
-		ArrayList lines = new ArrayList();
-
-		FeatureCollection collection = FeatureCollections.newCollection();
-		
-		boolean clipped = polylineObj.getobjectconsistency()==IomConstants.IOM_INCOMPLETE;
-		for(int sequencei=0; sequencei<polylineObj.getattrvaluecount("sequence"); sequencei++) {
-			if(!clipped && sequencei>0) {
-				throw new IllegalArgumentException();
-			}
-			
-			Coordinate pt0 = null;
-
-			IomObject sequence=polylineObj.getattrobj("sequence", sequencei);
-			for(int segmenti=0; segmenti<sequence.getattrvaluecount("segment"); segmenti++) {
-				IomObject segment=sequence.getattrobj("segment", segmenti);
-				
-//				logger.debug("segmenti " + segmenti + ": " + segment.toString());
-	
-				if(segment.getobjecttag().equals("COORD")) {                                    
-
-					String c1=segment.getattrvalue("C1");
-					String c2=segment.getattrvalue("C2");
-										
-					Coordinate coord = new Coordinate(Double.valueOf(c1), Double.valueOf(c2));
-									
-					if ( pt0 != null )
-					{
-						LineSegment linesegment = new LineSegment(pt0, coord);
-						lines.add(linesegment.toGeometry(gf));
-//						logger.debug(linesegment.toString());
-					}
-					
-					pt0 = new Coordinate(coord);
-
-				} else if (segment.getobjecttag().equals("ARC")) {
-					String a1=segment.getattrvalue("A1");
-					String a2=segment.getattrvalue("A2");
-					String c1=segment.getattrvalue("C1");
-					String c2=segment.getattrvalue("C2");
-
-					Coordinate ptStart = new Coordinate(pt0);
-					Coordinate ptArc = new Coordinate(Double.valueOf(a1), Double.valueOf(a2));
-					Coordinate ptEnd = new Coordinate(Double.valueOf(c1), Double.valueOf(c2));
-
-					LineSegment linesegment = new LineSegment(ptStart, ptEnd);
-					pt0 = new Coordinate(ptEnd);
-
-					// Liniensegment normalisieren aka Kreisbogen 'normalisieren'.
-					linesegment.normalize();
-					ptStart = new Coordinate(linesegment.p0);
-					ptEnd = new Coordinate(linesegment.p1);
-					
-					LineString line = null;
-					
-					// Prüfen ob Kreisbogen in einer anderen Gemeinde bereits existiert.
-					// Falls kein store übergeben wird, wird wie bis anhin ohne Berücksichtigung anderer Kreisbögen segmentiert.
-					if (store != null) {
-						try {		
-							//logger.debug("arc helper...");	
-							// Im blödsten Fall müsste man noch prüfen, ob es wirklich der gleich Bogen ist (konkav <-> konvex).
-							org.opengis.filter.Filter filter = CQL.toFilter("NOT (gem_bfs = '" + gem_bfs + "' AND los = '" + los + "') AND classname = '" + className + "' AND EQUALS(ptstart, POINT(" + ptStart.x + " " + ptStart.y + ")) AND EQUALS(ptend, POINT(" + ptEnd.x + " " + ptEnd.y + "))");
-							//logger.debug(filter);
-							FeatureCollection<SimpleFeatureType, SimpleFeature> fc = store.getFeatures(filter);
-							if (fc.size() == 0) {
-								SimpleFeatureType ft = fc.getSchema();
-								SimpleFeatureBuilder fb = new SimpleFeatureBuilder( ft );
-								fb.set("classname", className);
-								fb.set("gem_bfs", gem_bfs);
-								fb.set("los", los);
-								fb.set("ptstart", new GeometryFactory().createPoint(ptStart));
-								fb.set("ptarc", new GeometryFactory().createPoint(ptArc));
-								fb.set("ptend", new GeometryFactory().createPoint(ptEnd));
-								line = interpolateArc(ptStart, ptArc, ptEnd, maxOverlaps);
-								fb.set("arc", line);
-
-								SimpleFeature feature = fb.buildFeature(null);
-
-								collection.add(feature);
-							} else {
-								Iterator it = fc.iterator();
-								while(it.hasNext()) {
-									line = (LineString) ((SimpleFeature) it.next()).getAttribute("arc");
-									logger.debug(line);
-									break;
-								}
-								fc.close(it);
-							}	
-						} catch (CQLException e) {
-							e.printStackTrace();
-							logger.error(e.getMessage());
-						} catch (IOException e) {
-							e.printStackTrace();
-							logger.error(e.getMessage());
-						}
-					} else {
-						line = interpolateArc(ptStart, ptArc, ptEnd, maxOverlaps);
-					}
-					lines.add(line);
-				} else {
-					logger.error("custom line form is not supported");
-				}      
-			}
-		}
-		
-		linestrings = (LineString[]) lines.toArray(new LineString[0]);
-		MultiLineString multilinestring = new MultiLineString(linestrings, gf);
-		
-		LineMerger merger = new LineMerger();
-		merger.add(multilinestring);
-		Collection coll = merger.getMergedLineStrings();
-		LineString line = (LineString) coll.toArray()[0];
-//		logger.debug(line.toString());
-		
-		// Allenfalls neue Kreisbogen speichern.
-		if (collection.size() != 0) {
-			try {	
-				//logger.debug(collection.size());
-				store.addFeatures(collection);
-			} catch (IOException e) {
-				e.printStackTrace();
-				logger.error(e.getMessage());
-			}
-		}
-
-		
-		
-//		logger.debug("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-		
-		return line;
-	}
+//	public static Geometry polyline2jts(IomObject polylineObj, double maxOverlaps, FeatureStore<SimpleFeatureType, SimpleFeature>  store, String className, Integer gem_bfs, Integer los) 
+//	{	
+//		GeometryFactory gf = new GeometryFactory();
+//		
+//		LineString[] linestrings = null;
+//		ArrayList lines = new ArrayList();
+//
+//		FeatureCollection collection = FeatureCollections.newCollection();
+//		
+//		boolean clipped = polylineObj.getobjectconsistency()==IomConstants.IOM_INCOMPLETE;
+//		for(int sequencei=0; sequencei<polylineObj.getattrvaluecount("sequence"); sequencei++) {
+//			if(!clipped && sequencei>0) {
+//				throw new IllegalArgumentException();
+//			}
+//			
+//			Coordinate pt0 = null;
+//
+//			IomObject sequence=polylineObj.getattrobj("sequence", sequencei);
+//			for(int segmenti=0; segmenti<sequence.getattrvaluecount("segment"); segmenti++) {
+//				IomObject segment=sequence.getattrobj("segment", segmenti);
+//				
+////				logger.debug("segmenti " + segmenti + ": " + segment.toString());
+//	
+//				if(segment.getobjecttag().equals("COORD")) {                                    
+//
+//					String c1=segment.getattrvalue("C1");
+//					String c2=segment.getattrvalue("C2");
+//										
+//					Coordinate coord = new Coordinate(Double.valueOf(c1), Double.valueOf(c2));
+//									
+//					if ( pt0 != null )
+//					{
+//						LineSegment linesegment = new LineSegment(pt0, coord);
+//						lines.add(linesegment.toGeometry(gf));
+////						logger.debug(linesegment.toString());
+//					}
+//					
+//					pt0 = new Coordinate(coord);
+//
+//				} else if (segment.getobjecttag().equals("ARC")) {
+//					String a1=segment.getattrvalue("A1");
+//					String a2=segment.getattrvalue("A2");
+//					String c1=segment.getattrvalue("C1");
+//					String c2=segment.getattrvalue("C2");
+//
+//					Coordinate ptStart = new Coordinate(pt0);
+//					Coordinate ptArc = new Coordinate(Double.valueOf(a1), Double.valueOf(a2));
+//					Coordinate ptEnd = new Coordinate(Double.valueOf(c1), Double.valueOf(c2));
+//
+//					LineSegment linesegment = new LineSegment(ptStart, ptEnd);
+//					pt0 = new Coordinate(ptEnd);
+//
+//					// Liniensegment normalisieren aka Kreisbogen 'normalisieren'.
+//					linesegment.normalize();
+//					ptStart = new Coordinate(linesegment.p0);
+//					ptEnd = new Coordinate(linesegment.p1);
+//					
+//					LineString line = null;
+//					
+//					// Prüfen ob Kreisbogen in einer anderen Gemeinde bereits existiert.
+//					// Falls kein store übergeben wird, wird wie bis anhin ohne Berücksichtigung anderer Kreisbögen segmentiert.
+//					if (store != null) {
+//						try {		
+//							//logger.debug("arc helper...");	
+//							// Im blödsten Fall müsste man noch prüfen, ob es wirklich der gleich Bogen ist (konkav <-> konvex).
+//							org.opengis.filter.Filter filter = CQL.toFilter("NOT (gem_bfs = '" + gem_bfs + "' AND los = '" + los + "') AND classname = '" + className + "' AND EQUALS(ptstart, POINT(" + ptStart.x + " " + ptStart.y + ")) AND EQUALS(ptend, POINT(" + ptEnd.x + " " + ptEnd.y + "))");
+//							//logger.debug(filter);
+//							FeatureCollection<SimpleFeatureType, SimpleFeature> fc = store.getFeatures(filter);
+//							if (fc.size() == 0) {
+//								SimpleFeatureType ft = fc.getSchema();
+//								SimpleFeatureBuilder fb = new SimpleFeatureBuilder( ft );
+//								fb.set("classname", className);
+//								fb.set("gem_bfs", gem_bfs);
+//								fb.set("los", los);
+//								fb.set("ptstart", new GeometryFactory().createPoint(ptStart));
+//								fb.set("ptarc", new GeometryFactory().createPoint(ptArc));
+//								fb.set("ptend", new GeometryFactory().createPoint(ptEnd));
+//								line = interpolateArc(ptStart, ptArc, ptEnd, maxOverlaps);
+//								fb.set("arc", line);
+//
+//								SimpleFeature feature = fb.buildFeature(null);
+//
+//								collection.add(feature);
+//							} else {
+//								Iterator it = fc.iterator();
+//								while(it.hasNext()) {
+//									line = (LineString) ((SimpleFeature) it.next()).getAttribute("arc");
+//									logger.debug(line);
+//									break;
+//								}
+//								fc.close(it);
+//							}	
+//						} catch (CQLException e) {
+//							e.printStackTrace();
+//							logger.error(e.getMessage());
+//						} catch (IOException e) {
+//							e.printStackTrace();
+//							logger.error(e.getMessage());
+//						}
+//					} else {
+//						line = interpolateArc(ptStart, ptArc, ptEnd, maxOverlaps);
+//					}
+//					lines.add(line);
+//				} else {
+//					logger.error("custom line form is not supported");
+//				}      
+//			}
+//		}
+//		
+//		linestrings = (LineString[]) lines.toArray(new LineString[0]);
+//		MultiLineString multilinestring = new MultiLineString(linestrings, gf);
+//		
+//		LineMerger merger = new LineMerger();
+//		merger.add(multilinestring);
+//		Collection coll = merger.getMergedLineStrings();
+//		LineString line = (LineString) coll.toArray()[0];
+////		logger.debug(line.toString());
+//		
+//		// Allenfalls neue Kreisbogen speichern.
+//		if (collection.size() != 0) {
+//			try {	
+//				//logger.debug(collection.size());
+//				store.addFeatures(collection);
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//				logger.error(e.getMessage());
+//			}
+//		}
+//
+//		
+//		
+////		logger.debug("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+//		
+//		return line;
+//	}
 
 
 
@@ -314,7 +362,7 @@ public class Iox2wkt {
 	 * @param ptEnd Bogenende
 	 * @param maxOverlaps maximal erlaubter Overlap
 	 */
-	private static LineString interpolateArc(Coordinate ptStart, Coordinate ptArc, Coordinate ptEnd, double maxOverlaps) {
+	private static void interpolateArc(Coordinate ptStart, Coordinate ptArc, Coordinate ptEnd, double maxOverlaps) {
 
 //		logger.setLevel(Level.DEBUG);
 //		logger.debug("Start: " + ptStart.toString());
@@ -322,101 +370,78 @@ public class Iox2wkt {
 //		logger.debug("End: " + ptEnd.toString());
 		
 		
-		CoordinateList mycoords = new CoordinateList();
-		mycoords.add(ptStart);
-		
-		double arcIncr = 1;
-		if(maxOverlaps < 0.00001) {
-			maxOverlaps = 0.002;
-		}
-		
-		// TEMPORARY:
-		maxOverlaps = 0.002;
+	    double arcIncr = 1;
+	    if(maxOverlaps < 0.001) {
+	        maxOverlaps = 0.002;
+	    }
 
-		LineSegment segment = new LineSegment( ptStart, ptEnd );
-		double dist = segment.distancePerpendicular( ptArc );
-		
-		// Abbruchkriterium Handgelenkt mal Pi...
-		if ( dist < maxOverlaps )
-		{
-			mycoords.add(ptEnd);
-			LineString line = new GeometryFactory().createLineString(mycoords.toCoordinateArray());
-			return line;
-		}
-		
-		Coordinate center = getArcCenter(ptStart, ptArc, ptEnd);
+	    // TEMPORARY:
+	    maxOverlaps = 0.002;
 
-		double cx = center.x; double cy = center.y;
-		double px = ptArc.x; double py = ptArc.y;
-		// Radius noch auf Meter runden. Ob sinnvoll oder nicht, wird sich zeigen
-		// NEIN, keine schlaue Idee: Zentroidpunkte liegen plötzlich nicht mehr 
-		// innerhalb des Polygons -> nicht runden.
-		double r = Math.sqrt((cx-px)*(cx-px)+(cy-py)*(cy-py));
-		//logger.debug("radius: " + r);
+	    Coordinate center = getArcCenter(ptStart, ptArc, ptEnd);
 
-		double myAlpha = 2.0*Math.acos(1.0-maxOverlaps/r);
+	    double cx = center.x; double cy = center.y;
+	    double px = ptArc.x; double py = ptArc.y;
+	    double r = Math.sqrt((cx-px)*(cx-px)+(cy-py)*(cy-py));      
 
-		if (myAlpha < arcIncr)  {
-			arcIncr = myAlpha;
-		}
+	    double myAlpha = 2.0*Math.acos(1.0-maxOverlaps/r);
 
-		double a1 = Math.atan2(ptStart.y - center.y, ptStart.x - center.x);
-		double a2 = Math.atan2(ptArc.y - center.y, ptArc.x - center.x);
-		double a3 = Math.atan2(ptEnd.y - center.y, ptEnd.x - center.x);
+	    if (myAlpha < arcIncr)  {
+	        arcIncr = myAlpha;
+	    }
 
-		double sweep;
+	    double a1 = Math.atan2(ptStart.y - center.y, ptStart.x - center.x);
+	    double a2 = Math.atan2(ptArc.y - center.y, ptArc.x - center.x);
+	    double a3 = Math.atan2(ptEnd.y - center.y, ptEnd.x - center.x);
 
-		// Clockwise
-		if(a1 > a2 && a2 > a3) {
-			sweep = a3 - a1;
-		}
-		// Counter-clockwise
-		else if(a1 < a2 && a2 < a3) {
-			sweep = a3 - a1;
-		}
-		// Clockwise, wrap
-		else if((a1 < a2 && a1 > a3) || (a2 < a3 && a1 > a3)) {
-			sweep = a3 - a1 + 2*Math.PI;
-		}
-		// Counter-clockwise, wrap
-		else if((a1 > a2 && a1 < a3) || (a2 > a3 && a1 < a3)) {
-			sweep = a3 - a1 - 2*Math.PI;
-		}
-		else {
-			sweep = 0.0;
-		}
+	    double sweep;
 
-		double ptcount = Math.ceil(Math.abs(sweep/arcIncr));
+	    // Clockwise
+	    if(a1 > a2 && a2 > a3) {
+	        sweep = a3 - a1;
+	    }
+	    // Counter-clockwise
+	    else if(a1 < a2 && a2 < a3) {
+	        sweep = a3 - a1;
+	    }
+	    // Clockwise, wrap
+	    else if((a1 < a2 && a1 > a3) || (a2 < a3 && a1 > a3)) {
+	        sweep = a3 - a1 + 2*Math.PI;
+	    }
+	    // Counter-clockwise, wrap
+	    else if((a1 > a2 && a1 < a3) || (a2 > a3 && a1 < a3)) {
+	        sweep = a3 - a1 - 2*Math.PI;
+	    }
+	    else {
+	        sweep = 0.0;
+	    }
 
-		if(sweep < 0) arcIncr *= -1.0;
+	    double ptcount = Math.ceil(Math.abs(sweep/arcIncr));
 
-		double angle = a1;
+	    if(sweep < 0) arcIncr *= -1.0;
 
-		for(int i = 0; i < ptcount - 1; i++) {
-			angle += arcIncr;
+	    double angle = a1;
 
-			if(arcIncr > 0.0 && angle > Math.PI) angle -= 2*Math.PI;
-			if(arcIncr < 0.0 && angle < -1*Math.PI) angle -= 2*Math.PI;
+	    for(int i = 0; i < ptcount - 1; i++) {
+	        angle += arcIncr;
 
-			double x = cx + r*Math.cos(angle);
-			double y = cy + r*Math.sin(angle);
+	        if(arcIncr > 0.0 && angle > Math.PI) angle -= 2*Math.PI;
+	        if(arcIncr < 0.0 && angle < -1*Math.PI) angle -= 2*Math.PI;
 
-			Coordinate coord =  new Coordinate(x, y);
-			mycoords.add(coord, false);
+	        double x = cx + r*Math.cos(angle);
+	        double y = cy + r*Math.sin(angle);
 
-			// Den Arcpoint wollen wir nicht mehr im Linesegment!
-			/*
-			if((angle < a2) && ((angle + arcIncr) > a2)) {
-				coords.add(ptArc, false);
-			}
-			if((angle > a2) && ((angle + arcIncr) < a2)) {
-				coords.add(ptArc, false);
-			}
-			*/
-		}
-		mycoords.add(ptEnd, false);    
-		LineString line = new GeometryFactory().createLineString(mycoords.toCoordinateArray());
-		return line;
+	        Coordinate coord =  new Coordinate(x, y);
+	        coords.add(coord, false);
+
+	        if((angle < a2) && ((angle + arcIncr) > a2)) {
+	            coords.add(ptArc, false);
+	        }
+	        if((angle > a2) && ((angle + arcIncr) < a2)) {
+	            coords.add(ptArc, false);
+	        }
+	    }
+	    coords.add(ptEnd, false);
 	}
 
 

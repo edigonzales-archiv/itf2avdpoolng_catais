@@ -1,669 +1,295 @@
-2014-02-16 16:20:28 org.catais.App [INFO] Start: Sun Feb 16 16:20:28 CET 2014
-2014-02-16 16:20:28 org.catais.App [DEBUG] Properties filename: itf2avdpoolng.properties
-2014-02-16 16:20:28 org.catais.App [DEBUG] {port=5432, doCommit2Svn=false, importSourceDir=/home/stefan/tmp/av/, host=localhost, doDeleteFiles=false, renumberTid=true, doExport=false, doIli2freeframe=false, doImport=true, enumText=true, doGeobau=false, schema=av_avdpool_ng, addAttr=true, pwd=ziegler12, mopublicBaseDir=/tmp/mopublic/, ili2chModelName=DM01AVCH24D, geobauDir=/tmp/, doMopublic=true, dbname=rosebud2, doFusion=false, ili2chDir=/tmp/, importDestinationDir=/tmp/, user=stefan, doIli2ch=false, importModelName=DM01AVSO24}
-2014-02-16 16:20:28 org.catais.App [INFO] doImport: true
-2014-02-16 16:20:28 org.catais.App [INFO] doAvwms: null
-2014-02-16 16:20:28 org.catais.App [INFO] doIli2ch: false
-2014-02-16 16:20:28 org.catais.App [INFO] doIli2freeframe: false
-2014-02-16 16:20:28 org.catais.App [INFO] doGeobau: false
-2014-02-16 16:20:28 org.catais.App [INFO] doMopublic: true
-2014-02-16 16:20:28 org.catais.App [INFO] doCommit2Svn: false
-2014-02-16 16:20:28 org.catais.App [INFO] doDeleteFiles: false
-2014-02-16 16:20:28 org.catais.App [INFO] doVacuum: null
-2014-02-16 16:20:28 org.catais.App [INFO] doReindex: null
-2014-02-16 16:20:28 org.catais.App [INFO] doExport: false
-2014-02-16 16:20:28 org.catais.App [INFO] doFusion: false
-2014-02-16 16:20:28 org.catais.App [INFO] Start import...
-2014-02-16 16:20:28 org.catais.importdata.ImportData [INFO] Import: /home/stefan/tmp/av/258400.itf
-2014-02-16 16:20:28 org.catais.importdata.IliReader [DEBUG] inputRepoModelName: DM01AVSO24
-2014-02-16 16:20:28 org.catais.importdata.IliReader [DEBUG] enumText: true
-2014-02-16 16:20:28 org.catais.importdata.IliReader [DEBUG] host: localhost
-2014-02-16 16:20:28 org.catais.importdata.IliReader [DEBUG] port: 5432
-2014-02-16 16:20:28 org.catais.importdata.IliReader [DEBUG] port: rosebud2
-2014-02-16 16:20:28 org.catais.importdata.IliReader [DEBUG] schema: av_avdpool_ng
-2014-02-16 16:20:28 org.catais.importdata.IliReader [DEBUG] user: stefan
-2014-02-16 16:20:28 org.catais.importdata.IliReader [DEBUG] pwd: ziegler12
-2014-02-16 16:20:28 org.catais.importdata.IliReader [INFO] DM01AVSO24
-2014-02-16 16:20:28 org.catais.importdata.IliReader [DEBUG] Interlis model compiled
-2014-02-16 16:20:28 org.catais.importdata.IliReader [DEBUG] Starting Transaction...
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1nachfuehrung
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1pos
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1symbol
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_hfp1nachfuehrung
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_hfp1
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_hfp1pos
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2nachfuehrung
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2pos
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2symbol
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_hfp2nachfuehrung
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_hfp2
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_hfp2pos
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3nachfuehrung
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3pos
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3symbol
-2014-02-16 16:20:29 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfpnachfuehrung
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfixpunkt
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfixpunktpos
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfixpunktsymbol
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hfp3nachfuehrung
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hfp3
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hfp3pos
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_bbnachfuehrung
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projboflaeche
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projgebaeudenummer
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projgebaeudenummerpos
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projobjektname
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projobjektnamepos
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projboflaechesymbol
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_boflaeche
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_gebaeudenummer
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_gebaeudenummerpos
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_objektname
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_objektnamepos
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_boflaechesymbol
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_einzelpunkt
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_einzelpunktpos
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_eonachfuehrung
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_einzelobjekt
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_flaechenelement
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_flaechenelementsymbol
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_linienelement
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_linienelementsymbol
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_punktelement
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektname
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektnamepos
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektnummer
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektnummerpos
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_einzelpunkt
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_einzelpunktpos
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: hoehen_honachfuehrung
-2014-02-16 16:20:30 org.catais.importdata.IliReader [INFO] Delete features: hoehen_hoehenpunkt
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: hoehen_hoehenpunktpos
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: hoehen_gelaendekante
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: hoehen_aussparung
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_nknachfuehrung
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_flurname
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_flurnamepos
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_ortsname
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_ortsnamepos
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_gelaendename
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_gelaendenamepos
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lsnachfuehrung
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grenzpunkt
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grenzpunktpos
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grenzpunktsymbol
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projgrundstueck
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projgrundstueckpos
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib1
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projliegenschaft
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib2
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projselbstrecht
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib3
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projbergwerk
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grundstueck
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grundstueckpos
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib4
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_liegenschaft
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib5
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_selbstrecht
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib6
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_bergwerk
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_rlnachfuehrung
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_leitungsobjekt
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_leitungsobjektpos
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_lineattrib7
-2014-02-16 16:20:31 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_flaechenelement
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_linienelement
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_punktelement
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_signalpunkt
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_signalpunktpos
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_einzelpunkt
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_einzelpunktpos
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: nummerierungsbereiche_nummerierungsbereich
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: nummerierungsbereiche_nbgeometrie
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: nummerierungsbereiche_nummerierungsbereichpos
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_gemnachfuehrung
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_hoheitsgrenzpunkt
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_hoheitsgrenzpunktpos
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_hoheitsgrenzpunktsymbol
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_gemeinde
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_projgemeindegrenze
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_lineattrib8
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_gemeindegrenze
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: bezirksgrenzen_bezirksgrenzabschnitt
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: kantonsgrenzen_kantonsgrenzabschnitt
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: landesgrenzen_landesgrenzabschnitt
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: planeinteilungen_plan
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: planeinteilungen_plangeometrie
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: planeinteilungen_planpos
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: tseinteilung_toleranzstufe
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: tseinteilung_toleranzstufepos
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: rutschgebiete_rutschung
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: rutschgebiete_rutschungpos
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_osnachfuehrung
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsverbund
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsverbundtext
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaft
-2014-02-16 16:20:32 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsname
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsname_pos
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_plz6nachfuehrung
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_plz6
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebnachfuehrung
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_lokalisation
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_lokalisationsname
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_lokalisationsnamepos
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_benanntesgebiet
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_strassenstueck
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudeeingang
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_hausnummerpos
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudename
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudenamepos
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudebeschreibung
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planlayout
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planbeschriftung
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planbeschriftungpos
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_koordinatenanschrift
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_koordinatenanschriftpos
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_linienobjekt
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_koordinatenlinie
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_darstellungsflaeche
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planlayoutsymbol
-2014-02-16 16:20:33 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_netzkreuz
-2014-02-16 16:20:33 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.FixpunkteKategorie1(oid itf0)...
-2014-02-16 16:20:33 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie1.LFP1
-2014-02-16 16:20:33 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie1.LFP1Nachfuehrung
-2014-02-16 16:20:33 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie1.LFP1Pos
-2014-02-16 16:20:33 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.FixpunkteKategorie2(oid itf1)...
-2014-02-16 16:20:33 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie1.LFP1Symbol
-2014-02-16 16:20:33 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie1.LFP1Nachfuehrung
-2014-02-16 16:20:33 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2
-2014-02-16 16:20:33 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2Nachfuehrung
-2014-02-16 16:20:33 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2Pos
-2014-02-16 16:20:33 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.FixpunkteKategorie3(oid itf2)...
-2014-02-16 16:20:33 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2Symbol
-2014-02-16 16:20:33 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2Nachfuehrung
-2014-02-16 16:20:33 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.LFP3
-2014-02-16 16:20:34 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.LFP3Nachfuehrung
-2014-02-16 16:20:34 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.LFP3Pos
-2014-02-16 16:20:34 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.LFP3Symbol
-2014-02-16 16:20:34 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.LFP3Nachfuehrung
-2014-02-16 16:20:34 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.Hilfsfixpunkt
-2014-02-16 16:20:34 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.HilfsFPNachfuehrung
-2014-02-16 16:20:34 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.HilfsfixpunktPos
-2014-02-16 16:20:35 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Bodenbedeckung(oid itf3)...
-2014-02-16 16:20:35 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.HilfsfixpunktSymbol
-2014-02-16 16:20:35 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.HilfsFPNachfuehrung
-2014-02-16 16:20:35 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.BBNachfuehrung
-2014-02-16 16:20:35 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.ProjBoFlaeche
-2014-02-16 16:20:35 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.ProjGebaeudenummer
-2014-02-16 16:20:37 org.catais.importdata.IliReader [DEBUG] SmallAreas size: 
-2014-02-16 16:20:37 org.catais.importdata.IliReader [DEBUG] 0
-2014-02-16 16:20:37 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.BoFlaeche
-2014-02-16 16:20:39 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.Gebaeudenummer
-2014-02-16 16:20:40 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.Objektname
-2014-02-16 16:20:40 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.ObjektnamePos
-2014-02-16 16:20:40 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Einzelobjekte(oid itf4)...
-2014-02-16 16:20:40 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.BoFlaecheSymbol
-2014-02-16 16:20:40 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.ProjBoFlaeche
-2014-02-16 16:20:40 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Einzelobjekt
-2014-02-16 16:20:40 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.EONachfuehrung
-2014-02-16 16:20:41 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.EONachfuehrung
-2014-02-16 16:20:41 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Flaechenelement
-2014-02-16 16:20:41 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Linienelement
-2014-02-16 16:20:41 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Objektname
-2014-02-16 16:20:41 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Hoehen(oid itf5)...
-2014-02-16 16:20:41 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Nomenklatur(oid itf6)...
-2014-02-16 16:20:41 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.ObjektnamePos
-2014-02-16 16:20:41 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Flaechenelement
-2014-02-16 16:20:41 org.catais.importdata.IliReader [DEBUG] SmallAreas size: 
-2014-02-16 16:20:41 org.catais.importdata.IliReader [DEBUG] 0
-2014-02-16 16:20:41 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.Flurname
-2014-02-16 16:20:42 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.FlurnamePos
-2014-02-16 16:20:42 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.NKNachfuehrung
-2014-02-16 16:20:42 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.NKNachfuehrung
-2014-02-16 16:20:42 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.Ortsname
-2014-02-16 16:20:42 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Liegenschaften(oid itf7)...
-2014-02-16 16:20:42 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.OrtsnamePos
-2014-02-16 16:20:42 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.Ortsname
-2014-02-16 16:20:42 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.Grenzpunkt
-2014-02-16 16:20:44 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.LSNachfuehrung
-2014-02-16 16:20:44 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.GrenzpunktSymbol
-2014-02-16 16:20:46 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.ProjGrundstueck
-2014-02-16 16:20:46 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.ProjGrundstueckPos
-2014-02-16 16:20:46 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.LSNachfuehrung
-2014-02-16 16:20:46 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.ProjLiegenschaft
-2014-02-16 16:20:46 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.Grundstueck
-2014-02-16 16:20:46 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.GrundstueckPos
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] SmallAreas size: 
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] 0
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.Liegenschaft
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.ProjLiegenschaft
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Rohrleitungen(oid itf8)...
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.SelbstRecht
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.SelbstRecht
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Rohrleitungen.Leitungsobjekt
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Rohrleitungen.RLNachfuehrung
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Rohrleitungen.LeitungsobjektPos
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Nummerierungsbereiche(oid itf9)...
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Rohrleitungen.Linienelement
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nummerierungsbereiche.Nummerierungsbereich
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Rohrleitungen.RLNachfuehrung
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nummerierungsbereiche.NBGeometrie
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Gemeindegrenzen(oid itf10)...
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nummerierungsbereiche.NummerierungsbereichPos
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nummerierungsbereiche.NBGeometrie
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.Hoheitsgrenzpunkt
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.GEMNachfuehrung
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.HoheitsgrenzpunktPos
-2014-02-16 16:20:47 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.HoheitsgrenzpunktSymbol
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.Gemeinde
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Bezirksgrenzen(oid itf11)...
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] SmallAreas size: 
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] 0
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.Gemeindegrenze
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Kantonsgrenzen(oid itf12)...
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bezirksgrenzen.Bezirksgrenzabschnitt
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Landesgrenzen(oid itf13)...
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Planeinteilungen(oid itf14)...
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Kantonsgrenzen.Kantonsgrenzabschnitt
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Planeinteilungen.Plan
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] SmallAreas size: 
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] 0
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Planeinteilungen.Plangeometrie
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.TSEinteilung(oid itf15)...
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Planeinteilungen.PlanPos
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Rutschgebiete(oid itf16)...
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.PLZOrtschaft(oid itf17)...
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Gebaeudeadressen(oid itf18)...
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] SmallAreas size: 
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] 0
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.TSEinteilung.Toleranzstufe
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.GEMNachfuehrung
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.Lokalisation
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.GEBNachfuehrung
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.LokalisationsName
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.LokalisationsNamePos
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.GEBNachfuehrung
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.BenanntesGebiet
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.Strassenstueck
-2014-02-16 16:20:48 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.Gebaeudeeingang
-2014-02-16 16:20:49 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Planrahmen(oid itf19)...
-2014-02-16 16:20:49 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.HausnummerPos
-2014-02-16 16:20:49 org.catais.importdata.IliReader [DEBUG] Committing Transaction...
-2014-02-16 16:20:49 org.catais.importdata.ImportData [INFO] Copying file...
-2014-02-16 16:20:49 org.catais.importdata.ImportData [INFO] File copied: /tmp/258400.itf
-2014-02-16 16:20:49 org.catais.importdata.ImportData [INFO] Zipping file...
-2014-02-16 16:20:49 org.catais.importdata.ImportData [INFO] File zipped: /tmp//258400.zip
-2014-02-16 16:20:49 org.catais.importdata.ImportData [INFO] Import done: 258400.itf
-2014-02-16 16:20:49 org.catais.importdata.ImportData [INFO] Import: /home/stefan/tmp/av/257300.itf
-2014-02-16 16:20:49 org.catais.importdata.IliReader [DEBUG] inputRepoModelName: DM01AVSO24
-2014-02-16 16:20:49 org.catais.importdata.IliReader [DEBUG] enumText: true
-2014-02-16 16:20:49 org.catais.importdata.IliReader [DEBUG] host: localhost
-2014-02-16 16:20:49 org.catais.importdata.IliReader [DEBUG] port: 5432
-2014-02-16 16:20:49 org.catais.importdata.IliReader [DEBUG] port: rosebud2
-2014-02-16 16:20:49 org.catais.importdata.IliReader [DEBUG] schema: av_avdpool_ng
-2014-02-16 16:20:49 org.catais.importdata.IliReader [DEBUG] user: stefan
-2014-02-16 16:20:49 org.catais.importdata.IliReader [DEBUG] pwd: ziegler12
-2014-02-16 16:20:49 org.catais.importdata.IliReader [INFO] DM01AVSO24
-2014-02-16 16:20:50 org.catais.importdata.IliReader [DEBUG] Interlis model compiled
-2014-02-16 16:20:50 org.catais.importdata.IliReader [DEBUG] Starting Transaction...
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1nachfuehrung
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1pos
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1symbol
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_hfp1nachfuehrung
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_hfp1
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_hfp1pos
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2nachfuehrung
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2pos
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2symbol
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_hfp2nachfuehrung
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_hfp2
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_hfp2pos
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3nachfuehrung
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3pos
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3symbol
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfpnachfuehrung
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfixpunkt
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfixpunktpos
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfixpunktsymbol
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hfp3nachfuehrung
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hfp3
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hfp3pos
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_bbnachfuehrung
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projboflaeche
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projgebaeudenummer
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projgebaeudenummerpos
-2014-02-16 16:20:50 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projobjektname
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projobjektnamepos
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projboflaechesymbol
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_boflaeche
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_gebaeudenummer
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_gebaeudenummerpos
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_objektname
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_objektnamepos
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_boflaechesymbol
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_einzelpunkt
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_einzelpunktpos
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_eonachfuehrung
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_einzelobjekt
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_flaechenelement
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_flaechenelementsymbol
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_linienelement
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_linienelementsymbol
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_punktelement
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektname
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektnamepos
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektnummer
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektnummerpos
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_einzelpunkt
-2014-02-16 16:20:51 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_einzelpunktpos
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: hoehen_honachfuehrung
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: hoehen_hoehenpunkt
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: hoehen_hoehenpunktpos
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: hoehen_gelaendekante
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: hoehen_aussparung
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_nknachfuehrung
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_flurname
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_flurnamepos
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_ortsname
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_ortsnamepos
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_gelaendename
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_gelaendenamepos
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lsnachfuehrung
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grenzpunkt
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grenzpunktpos
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grenzpunktsymbol
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projgrundstueck
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projgrundstueckpos
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib1
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projliegenschaft
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib2
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projselbstrecht
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib3
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projbergwerk
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grundstueck
-2014-02-16 16:20:52 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grundstueckpos
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib4
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_liegenschaft
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib5
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_selbstrecht
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib6
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_bergwerk
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_rlnachfuehrung
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_leitungsobjekt
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_leitungsobjektpos
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_lineattrib7
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_flaechenelement
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_linienelement
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_punktelement
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_signalpunkt
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_signalpunktpos
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_einzelpunkt
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_einzelpunktpos
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: nummerierungsbereiche_nummerierungsbereich
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: nummerierungsbereiche_nbgeometrie
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: nummerierungsbereiche_nummerierungsbereichpos
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_gemnachfuehrung
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_hoheitsgrenzpunkt
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_hoheitsgrenzpunktpos
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_hoheitsgrenzpunktsymbol
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_gemeinde
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_projgemeindegrenze
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_lineattrib8
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_gemeindegrenze
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: bezirksgrenzen_bezirksgrenzabschnitt
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: kantonsgrenzen_kantonsgrenzabschnitt
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: landesgrenzen_landesgrenzabschnitt
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: planeinteilungen_plan
-2014-02-16 16:20:53 org.catais.importdata.IliReader [INFO] Delete features: planeinteilungen_plangeometrie
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: planeinteilungen_planpos
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: tseinteilung_toleranzstufe
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: tseinteilung_toleranzstufepos
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: rutschgebiete_rutschung
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: rutschgebiete_rutschungpos
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_osnachfuehrung
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsverbund
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsverbundtext
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaft
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsname
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsname_pos
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_plz6nachfuehrung
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_plz6
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebnachfuehrung
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_lokalisation
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_lokalisationsname
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_lokalisationsnamepos
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_benanntesgebiet
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_strassenstueck
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudeeingang
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_hausnummerpos
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudename
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudenamepos
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudebeschreibung
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planlayout
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planbeschriftung
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planbeschriftungpos
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_koordinatenanschrift
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_koordinatenanschriftpos
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_linienobjekt
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_koordinatenlinie
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_darstellungsflaeche
-2014-02-16 16:20:54 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planlayoutsymbol
-2014-02-16 16:20:55 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_netzkreuz
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.FixpunkteKategorie1(oid itf0)...
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie1.HFP1
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie1.HFP1Nachfuehrung
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.FixpunkteKategorie2(oid itf1)...
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie1.HFP1Pos
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie1.HFP1Nachfuehrung
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2Nachfuehrung
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2Pos
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.FixpunkteKategorie3(oid itf2)...
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2Symbol
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2Nachfuehrung
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.LFP3
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.LFP3Nachfuehrung
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.LFP3Pos
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.LFP3Symbol
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.LFP3Nachfuehrung
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.Hilfsfixpunkt
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.HilfsFPNachfuehrung
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.HilfsfixpunktPos
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Bodenbedeckung(oid itf3)...
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.HilfsfixpunktSymbol
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.HilfsFPNachfuehrung
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.BBNachfuehrung
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.ProjBoFlaeche
-2014-02-16 16:20:55 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.ProjGebaeudenummer
-2014-02-16 16:20:57 org.catais.importdata.IliReader [WARN] Should not reach here:
-2014-02-16 16:20:57 org.catais.importdata.IliReader [WARN] POLYGON ((637428.3687158471 245166.06984869865, 637428.419 245166.055, 637428.3790242536 245166.0665475514, 637428.3687158471 245166.06984869865))
-2014-02-16 16:20:57 org.catais.importdata.IliReader [DEBUG] SmallAreas size: 
-2014-02-16 16:20:57 org.catais.importdata.IliReader [DEBUG] 1
-2014-02-16 16:20:57 org.catais.importdata.IliReader [DEBUG] MULTILINESTRING ((637428.419 245166.055, 637428.3790242536 245166.0665475514), (637428.3790242536 245166.0665475514, 637428.3687158471 245166.06984869865))
-2014-02-16 16:20:57 org.catais.importdata.IliReader [DEBUG] LINESTRING (637428.3687158471 245166.06984869865, 637428.419 245166.055)
-2014-02-16 16:20:57 org.catais.importdata.IliReader [DEBUG] POINT (637428.3687158471 245166.06984869865)
-2014-02-16 16:20:57 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.BoFlaeche
-2014-02-16 16:21:02 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.Gebaeudenummer
-2014-02-16 16:21:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.Objektname
-2014-02-16 16:21:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.ObjektnamePos
-2014-02-16 16:21:03 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Einzelobjekte(oid itf4)...
-2014-02-16 16:21:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.BoFlaecheSymbol
-2014-02-16 16:21:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.ProjBoFlaeche
-2014-02-16 16:21:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Einzelobjekt
-2014-02-16 16:21:06 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.EONachfuehrung
-2014-02-16 16:21:06 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.EONachfuehrung
-2014-02-16 16:21:06 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Flaechenelement
-2014-02-16 16:21:07 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Linienelement
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Punktelement
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Objektname
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.ObjektnamePos
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Hoehen(oid itf5)...
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Nomenklatur(oid itf6)...
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Objektnummer
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Flaechenelement
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] SmallAreas size: 
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] 0
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.Flurname
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.FlurnamePos
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.NKNachfuehrung
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.NKNachfuehrung
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.Ortsname
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Liegenschaften(oid itf7)...
-2014-02-16 16:21:08 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.OrtsnamePos
-2014-02-16 16:21:09 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.Ortsname
-2014-02-16 16:21:09 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.Grenzpunkt
-2014-02-16 16:21:17 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.LSNachfuehrung
-2014-02-16 16:21:17 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.GrenzpunktSymbol
-2014-02-16 16:21:23 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.ProjGrundstueck
-2014-02-16 16:21:23 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.ProjGrundstueckPos
-2014-02-16 16:21:23 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.LSNachfuehrung
-2014-02-16 16:21:23 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.ProjLiegenschaft
-2014-02-16 16:21:23 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.Grundstueck
-2014-02-16 16:21:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.GrundstueckPos
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] Should not reach here:
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] POLYGON ((637915.7318004719 244251.90631269288, 637915.778 244251.98, 637915.7478239513 244251.93092050945, 637915.7318004719 244251.90631269288))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] Should not reach here:
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] POLYGON ((637478.865 244958.252, 637478.8529987215 244958.3551692067, 637478.858238156 244958.31474728655, 637478.865 244958.252))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] Should not reach here:
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] POLYGON ((637566.7242200105 244853.8731057685, 637566.7290445782 244853.87141470014, 637566.761 244853.859, 637566.7242200105 244853.8731057685))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] Should not reach here:
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] POLYGON ((638177.154 244552.077, 638177.140325897 244552.08404237134, 638177.1394366949 244552.0845284492, 638177.154 244552.077))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] Should not reach here:
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] POLYGON ((637971.0576552296 244669.01240301394, 637971.1126839622 244669.0294379945, 637971.0651381698 244669.01406136283, 637971.0576552296 244669.01240301394))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] Should not reach here:
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] POLYGON ((637920.846 244249.416, 637920.8022500938 244249.3491528585, 637920.8076632833 244249.35788054668, 637920.846 244249.416))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] Should not reach here:
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] POLYGON ((638676.655 244637.082, 638676.6434640315 244637.06373588028, 638676.6304213271 244637.04481245388, 638676.655 244637.082))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] Should not reach here:
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] POLYGON ((637684.265 244658.873, 637684.215011351 244658.86668089312, 637684.236078463 244658.8696370163, 637684.265 244658.873))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] Should not reach here:
-2014-02-16 16:21:26 org.catais.importdata.IliReader [WARN] POLYGON ((637971.1126839622 244669.0294379945, 637971.201 244669.058, 637971.1629503476 244669.0449987181, 637971.1126839622 244669.0294379945))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] SmallAreas size: 
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] 9
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] LINESTRING (637915.7318004719 244251.90631269288, 637915.778 244251.98)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] MULTILINESTRING ((637915.778 244251.98, 637915.7478239513 244251.93092050945), (637915.7478239513 244251.93092050945, 637915.7318004719 244251.90631269288))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] POINT (637915.7318004719 244251.90631269288)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] POINT (637478.8529987215 244958.3551692067)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] LINESTRING (637478.865 244958.252, 637478.8529987215 244958.3551692067)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] MULTILINESTRING ((637478.8529987215 244958.3551692067, 637478.858238156 244958.31474728655), (637478.858238156 244958.31474728655, 637478.865 244958.252))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] POINT (637566.7242200105 244853.8731057685)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] LINESTRING (637566.761 244853.859, 637566.7242200105 244853.8731057685)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] MULTILINESTRING ((637566.7242200105 244853.8731057685, 637566.7290445782 244853.87141470014), (637566.7290445782 244853.87141470014, 637566.761 244853.859))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] LINESTRING (638177.1394366949 244552.0845284492, 638177.154 244552.077)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] MULTILINESTRING ((638177.154 244552.077, 638177.140325897 244552.08404237134), (638177.140325897 244552.08404237134, 638177.1394366949 244552.0845284492))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] POINT (638177.1394366949 244552.0845284492)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] POINT (637971.0576552296 244669.01240301394)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] MULTILINESTRING ((637971.0576552296 244669.01240301394, 637971.1126839622 244669.0294379945), (637971.1126839622 244669.0294379945, 637971.0651381698 244669.01406136283), (637971.0651381698 244669.01406136283, 637971.0576552296 244669.01240301394))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] LINESTRING (637920.846 244249.416, 637920.8022500938 244249.3491528585)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] MULTILINESTRING ((637920.8022500938 244249.3491528585, 637920.8076632833 244249.35788054668), (637920.8076632833 244249.35788054668, 637920.846 244249.416))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] POINT (637920.8022500938 244249.3491528585)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] LINESTRING (638676.6304213271 244637.04481245388, 638676.655 244637.082)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] POINT (638676.6304213271 244637.04481245388)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] MULTILINESTRING ((638676.655 244637.082, 638676.6434640315 244637.06373588028), (638676.6434640315 244637.06373588028, 638676.6304213271 244637.04481245388))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] POINT (637684.215011351 244658.86668089312)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] MULTILINESTRING ((637684.215011351 244658.86668089312, 637684.236078463 244658.8696370163), (637684.236078463 244658.8696370163, 637684.265 244658.873))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] LINESTRING (637684.265 244658.873, 637684.215011351 244658.86668089312)
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] MULTILINESTRING ((637971.1126839622 244669.0294379945, 637971.201 244669.058), (637971.201 244669.058, 637971.1629503476 244669.0449987181), (637971.1629503476 244669.0449987181, 637971.1126839622 244669.0294379945))
-2014-02-16 16:21:26 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.Liegenschaft
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.ProjLiegenschaft
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Rohrleitungen(oid itf8)...
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.SelbstRecht
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.SelbstRecht
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Rohrleitungen.Leitungsobjekt
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Rohrleitungen.RLNachfuehrung
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Rohrleitungen.LeitungsobjektPos
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Nummerierungsbereiche(oid itf9)...
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Rohrleitungen.Linienelement
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nummerierungsbereiche.Nummerierungsbereich
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Rohrleitungen.RLNachfuehrung
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nummerierungsbereiche.NBGeometrie
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Gemeindegrenzen(oid itf10)...
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nummerierungsbereiche.NummerierungsbereichPos
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nummerierungsbereiche.NBGeometrie
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.Hoheitsgrenzpunkt
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.GEMNachfuehrung
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.HoheitsgrenzpunktPos
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.HoheitsgrenzpunktSymbol
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.Gemeinde
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Bezirksgrenzen(oid itf11)...
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] SmallAreas size: 
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] 0
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.Gemeindegrenze
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Kantonsgrenzen(oid itf12)...
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bezirksgrenzen.Bezirksgrenzabschnitt
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Landesgrenzen(oid itf13)...
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Planeinteilungen(oid itf14)...
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Kantonsgrenzen.Kantonsgrenzabschnitt
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Planeinteilungen.Plan
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] SmallAreas size: 
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] 0
-2014-02-16 16:21:28 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Planeinteilungen.Plangeometrie
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.TSEinteilung(oid itf15)...
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Planeinteilungen.PlanPos
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Rutschgebiete(oid itf16)...
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.PLZOrtschaft(oid itf17)...
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Gebaeudeadressen(oid itf18)...
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] SmallAreas size: 
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] 0
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.TSEinteilung.Toleranzstufe
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.GEMNachfuehrung
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.Lokalisation
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.GEBNachfuehrung
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.LokalisationsName
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.LokalisationsNamePos
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.GEBNachfuehrung
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.BenanntesGebiet
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.Strassenstueck
-2014-02-16 16:21:29 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.Gebaeudeeingang
-2014-02-16 16:21:31 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Planrahmen(oid itf19)...
-2014-02-16 16:21:31 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.HausnummerPos
-2014-02-16 16:21:32 org.catais.importdata.IliReader [DEBUG] Committing Transaction...
-2014-02-16 16:21:32 org.catais.importdata.ImportData [INFO] Copying file...
-2014-02-16 16:21:32 org.catais.importdata.ImportData [INFO] File copied: /tmp/257300.itf
-2014-02-16 16:21:32 org.catais.importdata.ImportData [INFO] Zipping file...
-2014-02-16 16:21:33 org.catais.importdata.ImportData [INFO] File zipped: /tmp//257300.zip
-2014-02-16 16:21:33 org.catais.importdata.ImportData [INFO] Import done: 257300.itf
-2014-02-16 16:21:33 org.catais.App [INFO] Filelist with errors: []
-2014-02-16 16:21:33 org.catais.App [INFO] End import.
-2014-02-16 16:21:33 org.catais.App [INFO] Start Mopublic...
-2014-02-16 16:21:33 org.catais.mopublic.ExportMopublic [INFO] MOpublic: /home/stefan/tmp/av/258400.itf
-2014-02-16 16:21:33 org.catais.mopublic.MOpublic [WARN] No query found for: Land_cover__LCSurfaceProj_PosText
-2014-02-16 16:21:33 org.catais.mopublic.MOpublic [WARN] No query found for: Heights__Contour_line
-2014-02-16 16:21:33 org.catais.mopublic.MOpublic [WARN] No query found for: Heights__Cut_out_surface
-2014-02-16 16:21:33 org.catais.mopublic.MOpublic [WARN] No query found for: Heights__Terrain_edge
-2014-02-16 16:21:33 org.catais.mopublic.MOpublic [WARN] No query found for: Heights__Individual_point
-2014-02-16 16:21:34 org.catais.mopublic.MOpublic [WARN] No query found for: Pipelines__Point_element
-2014-02-16 16:21:34 org.catais.mopublic.MOpublic [WARN] No query found for: Pipelines__Surface_element_PosName
-2014-02-16 16:21:34 org.catais.mopublic.MOpublic [WARN] No query found for: Pipelines__Surface_element
-2014-02-16 16:21:35 org.catais.mopublic.MOpublic [INFO] /tmp/mopublic//shp/lv03/d/2584
-2014-02-16 16:21:36 org.catais.mopublic.ShapefileWriter [DEBUG] Empty featurecollection.
-2014-02-16 16:21:36 org.catais.mopublic.ShapefileWriter [DEBUG] Empty featurecollection.
-2014-02-16 16:21:36 org.catais.mopublic.ShapefileWriter [DEBUG] Empty featurecollection.
-2014-02-16 16:21:36 org.catais.mopublic.ShapefileWriter [DEBUG] Empty featurecollection.
-2014-02-16 16:21:36 org.catais.mopublic.ShapefileWriter [DEBUG] Empty featurecollection.
-2014-02-16 16:21:37 org.catais.mopublic.ExportMopublic [INFO] MOpublic created: 258400.itf
-2014-02-16 16:21:37 org.catais.mopublic.ExportMopublic [INFO] MOpublic: /home/stefan/tmp/av/257300.itf
-2014-02-16 16:21:37 org.catais.mopublic.MOpublic [WARN] No query found for: Land_cover__LCSurfaceProj_PosText
-2014-02-16 16:21:38 org.catais.mopublic.MOpublic [WARN] No query found for: Heights__Contour_line
-2014-02-16 16:21:38 org.catais.mopublic.MOpublic [WARN] No query found for: Heights__Cut_out_surface
-2014-02-16 16:21:38 org.catais.mopublic.MOpublic [WARN] No query found for: Heights__Terrain_edge
-2014-02-16 16:21:38 org.catais.mopublic.MOpublic [WARN] No query found for: Heights__Individual_point
-2014-02-16 16:21:39 org.catais.mopublic.MOpublic [WARN] No query found for: Pipelines__Point_element
-2014-02-16 16:21:39 org.catais.mopublic.MOpublic [WARN] No query found for: Pipelines__Surface_element_PosName
-2014-02-16 16:21:39 org.catais.mopublic.MOpublic [WARN] No query found for: Pipelines__Surface_element
-2014-02-16 16:21:39 org.catais.mopublic.MOpublic [INFO] /tmp/mopublic//shp/lv03/d/2573
-2014-02-16 16:21:40 org.catais.mopublic.ShapefileWriter [DEBUG] Empty featurecollection.
-2014-02-16 16:21:40 org.catais.mopublic.ShapefileWriter [DEBUG] Empty featurecollection.
-2014-02-16 16:21:41 org.catais.mopublic.ShapefileWriter [DEBUG] Empty featurecollection.
-2014-02-16 16:21:41 org.catais.mopublic.ShapefileWriter [DEBUG] Empty featurecollection.
-2014-02-16 16:21:43 org.catais.mopublic.ExportMopublic [INFO] MOpublic created: 257300.itf
-2014-02-16 16:21:43 org.catais.mopublic.ExportMopublic [INFO] MOpublic Kanton created.
-2014-02-16 16:21:43 org.catais.App [INFO] End Mopublic.
-2014-02-16 16:21:43 org.catais.App [INFO] End: Sun Feb 16 16:21:43 CET 2014
+2014-02-27 07:46:57 org.catais.App [INFO] Start: Thu Feb 27 07:46:57 CET 2014
+2014-02-27 07:46:57 org.catais.App [DEBUG] Properties filename: itf2avdpoolng.properties
+2014-02-27 07:46:57 org.catais.App [DEBUG] {port=5432, doCommit2Svn=false, importSourceDir=/home/stefan/tmp/av/, host=localhost, doDeleteFiles=false, renumberTid=true, doExport=false, doIli2freeframe=false, doImport=true, enumText=true, doGeobau=false, schema=av_avdpool_ng, addAttr=true, pwd=ziegler12, mopublicBaseDir=/tmp/mopublic/, ili2chModelName=DM01AVCH24D, geobauDir=/tmp/, doMopublic=false, dbname=rosebud2, doFusion=false, ili2chDir=/tmp/, doAvwms=true, importDestinationDir=/tmp/, user=stefan, doIli2ch=false, importModelName=DM01AVSO24}
+2014-02-27 07:46:57 org.catais.App [INFO] doImport: true
+2014-02-27 07:46:57 org.catais.App [INFO] doAvwms: true
+2014-02-27 07:46:57 org.catais.App [INFO] doIli2ch: false
+2014-02-27 07:46:57 org.catais.App [INFO] doIli2freeframe: false
+2014-02-27 07:46:57 org.catais.App [INFO] doGeobau: false
+2014-02-27 07:46:57 org.catais.App [INFO] doMopublic: false
+2014-02-27 07:46:57 org.catais.App [INFO] doCommit2Svn: false
+2014-02-27 07:46:57 org.catais.App [INFO] doDeleteFiles: false
+2014-02-27 07:46:57 org.catais.App [INFO] doVacuum: null
+2014-02-27 07:46:57 org.catais.App [INFO] doReindex: null
+2014-02-27 07:46:57 org.catais.App [INFO] doExport: false
+2014-02-27 07:46:57 org.catais.App [INFO] doFusion: false
+2014-02-27 07:46:57 org.catais.App [INFO] Start import...
+2014-02-27 07:46:57 org.catais.importdata.ImportData [INFO] Import: /home/stefan/tmp/av/261200.itf
+2014-02-27 07:46:57 org.catais.importdata.IliReader [DEBUG] inputRepoModelName: DM01AVSO24
+2014-02-27 07:46:57 org.catais.importdata.IliReader [DEBUG] enumText: true
+2014-02-27 07:46:57 org.catais.importdata.IliReader [DEBUG] host: localhost
+2014-02-27 07:46:57 org.catais.importdata.IliReader [DEBUG] port: 5432
+2014-02-27 07:46:57 org.catais.importdata.IliReader [DEBUG] port: rosebud2
+2014-02-27 07:46:57 org.catais.importdata.IliReader [DEBUG] schema: av_avdpool_ng
+2014-02-27 07:46:57 org.catais.importdata.IliReader [DEBUG] user: stefan
+2014-02-27 07:46:57 org.catais.importdata.IliReader [DEBUG] pwd: ziegler12
+2014-02-27 07:46:57 org.catais.importdata.IliReader [INFO] DM01AVSO24
+2014-02-27 07:46:57 org.catais.importdata.IliReader [DEBUG] Interlis model compiled
+2014-02-27 07:46:57 org.catais.importdata.IliReader [DEBUG] Starting Transaction...
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1nachfuehrung
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1pos
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_lfp1symbol
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_hfp1nachfuehrung
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_hfp1
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie1_hfp1pos
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2nachfuehrung
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2pos
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_lfp2symbol
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_hfp2nachfuehrung
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_hfp2
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie2_hfp2pos
+2014-02-27 07:46:58 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3nachfuehrung
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3pos
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_lfp3symbol
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfpnachfuehrung
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfixpunkt
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfixpunktpos
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hilfsfixpunktsymbol
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hfp3nachfuehrung
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hfp3
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: fixpunktekategorie3_hfp3pos
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_bbnachfuehrung
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projboflaeche
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projgebaeudenummer
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projgebaeudenummerpos
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projobjektname
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projobjektnamepos
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_projboflaechesymbol
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_boflaeche
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_gebaeudenummer
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_gebaeudenummerpos
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_objektname
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_objektnamepos
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_boflaechesymbol
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_einzelpunkt
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: bodenbedeckung_einzelpunktpos
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_eonachfuehrung
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_einzelobjekt
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_flaechenelement
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_flaechenelementsymbol
+2014-02-27 07:46:59 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_linienelement
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_linienelementsymbol
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_punktelement
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektname
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektnamepos
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektnummer
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_objektnummerpos
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_einzelpunkt
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: einzelobjekte_einzelpunktpos
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: hoehen_honachfuehrung
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: hoehen_hoehenpunkt
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: hoehen_hoehenpunktpos
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: hoehen_gelaendekante
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: hoehen_aussparung
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_nknachfuehrung
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_flurname
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_flurnamepos
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_ortsname
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_ortsnamepos
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_gelaendename
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: nomenklatur_gelaendenamepos
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lsnachfuehrung
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grenzpunkt
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grenzpunktpos
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grenzpunktsymbol
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projgrundstueck
+2014-02-27 07:47:00 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projgrundstueckpos
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib1
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projliegenschaft
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib2
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projselbstrecht
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib3
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_projbergwerk
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grundstueck
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_grundstueckpos
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib4
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_liegenschaft
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib5
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_selbstrecht
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_lineattrib6
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: liegenschaften_bergwerk
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_rlnachfuehrung
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_leitungsobjekt
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_leitungsobjektpos
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_lineattrib7
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_flaechenelement
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_linienelement
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_punktelement
+2014-02-27 07:47:01 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_signalpunkt
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_signalpunktpos
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_einzelpunkt
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: rohrleitungen_einzelpunktpos
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: nummerierungsbereiche_nummerierungsbereich
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: nummerierungsbereiche_nbgeometrie
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: nummerierungsbereiche_nummerierungsbereichpos
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_gemnachfuehrung
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_hoheitsgrenzpunkt
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_hoheitsgrenzpunktpos
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_hoheitsgrenzpunktsymbol
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_gemeinde
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_projgemeindegrenze
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_lineattrib8
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: gemeindegrenzen_gemeindegrenze
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: bezirksgrenzen_bezirksgrenzabschnitt
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: kantonsgrenzen_kantonsgrenzabschnitt
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: landesgrenzen_landesgrenzabschnitt
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: planeinteilungen_plan
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: planeinteilungen_plangeometrie
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: planeinteilungen_planpos
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: tseinteilung_toleranzstufe
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: tseinteilung_toleranzstufepos
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: rutschgebiete_rutschung
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: rutschgebiete_rutschungpos
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_osnachfuehrung
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsverbund
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsverbundtext
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaft
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsname
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_ortschaftsname_pos
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_plz6nachfuehrung
+2014-02-27 07:47:02 org.catais.importdata.IliReader [INFO] Delete features: plzortschaft_plz6
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebnachfuehrung
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_lokalisation
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_lokalisationsname
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_lokalisationsnamepos
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_benanntesgebiet
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_strassenstueck
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudeeingang
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_hausnummerpos
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudename
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudenamepos
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: gebaeudeadressen_gebaeudebeschreibung
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planlayout
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planbeschriftung
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planbeschriftungpos
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_koordinatenanschrift
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_koordinatenanschriftpos
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_linienobjekt
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_koordinatenlinie
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_darstellungsflaeche
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_planlayoutsymbol
+2014-02-27 07:47:03 org.catais.importdata.IliReader [INFO] Delete features: planrahmen_netzkreuz
+2014-02-27 07:47:03 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.FixpunkteKategorie1(oid itf0)...
+2014-02-27 07:47:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie1.LFP1
+2014-02-27 07:47:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie1.LFP1Nachfuehrung
+2014-02-27 07:47:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie1.LFP1Pos
+2014-02-27 07:47:03 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.FixpunkteKategorie2(oid itf1)...
+2014-02-27 07:47:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie1.LFP1Symbol
+2014-02-27 07:47:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie1.LFP1Nachfuehrung
+2014-02-27 07:47:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2
+2014-02-27 07:47:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2Nachfuehrung
+2014-02-27 07:47:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2Pos
+2014-02-27 07:47:03 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.FixpunkteKategorie3(oid itf2)...
+2014-02-27 07:47:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2Symbol
+2014-02-27 07:47:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie2.LFP2Nachfuehrung
+2014-02-27 07:47:03 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.LFP3
+2014-02-27 07:47:04 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.LFP3Nachfuehrung
+2014-02-27 07:47:04 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.LFP3Pos
+2014-02-27 07:47:04 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.LFP3Nachfuehrung
+2014-02-27 07:47:04 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.Hilfsfixpunkt
+2014-02-27 07:47:05 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.HilfsFPNachfuehrung
+2014-02-27 07:47:05 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Bodenbedeckung(oid itf3)...
+2014-02-27 07:47:05 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.HilfsfixpunktPos
+2014-02-27 07:47:06 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.FixpunkteKategorie3.HilfsFPNachfuehrung
+2014-02-27 07:47:06 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.BBNachfuehrung
+2014-02-27 07:47:06 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.ProjBoFlaeche
+2014-02-27 07:47:08 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.BoFlaeche
+2014-02-27 07:47:13 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.Gebaeudenummer
+2014-02-27 07:47:13 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.GebaeudenummerPos
+2014-02-27 07:47:13 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.Objektname
+2014-02-27 07:47:13 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.ObjektnamePos
+2014-02-27 07:47:13 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Einzelobjekte(oid itf4)...
+2014-02-27 07:47:13 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.BoFlaecheSymbol
+2014-02-27 07:47:13 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bodenbedeckung.ProjBoFlaeche
+2014-02-27 07:47:13 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Einzelobjekt
+2014-02-27 07:47:14 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.EONachfuehrung
+2014-02-27 07:47:14 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.EONachfuehrung
+2014-02-27 07:47:14 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Flaechenelement
+2014-02-27 07:47:14 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Linienelement
+2014-02-27 07:47:14 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.LinienelementSymbol
+2014-02-27 07:47:14 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Punktelement
+2014-02-27 07:47:14 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Objektname
+2014-02-27 07:47:14 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Hoehen(oid itf5)...
+2014-02-27 07:47:14 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Nomenklatur(oid itf6)...
+2014-02-27 07:47:14 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.ObjektnamePos
+2014-02-27 07:47:15 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Einzelobjekte.Flaechenelement
+2014-02-27 07:47:15 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.Flurname
+2014-02-27 07:47:15 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.FlurnamePos
+2014-02-27 07:47:15 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.NKNachfuehrung
+2014-02-27 07:47:15 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.NKNachfuehrung
+2014-02-27 07:47:15 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.Ortsname
+2014-02-27 07:47:15 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.OrtsnamePos
+2014-02-27 07:47:15 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.Gelaendename
+2014-02-27 07:47:15 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Liegenschaften(oid itf7)...
+2014-02-27 07:47:15 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.GelaendenamePos
+2014-02-27 07:47:15 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nomenklatur.Ortsname
+2014-02-27 07:47:15 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.Grenzpunkt
+2014-02-27 07:47:19 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.LSNachfuehrung
+2014-02-27 07:47:20 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.GrenzpunktPos
+2014-02-27 07:47:23 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.ProjGrundstueck
+2014-02-27 07:47:23 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.ProjGrundstueckPos
+2014-02-27 07:47:23 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.LSNachfuehrung
+2014-02-27 07:47:23 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.ProjLiegenschaft
+2014-02-27 07:47:23 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.Grundstueck
+2014-02-27 07:47:23 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.GrundstueckPos
+2014-02-27 07:47:23 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.Liegenschaft
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.ProjLiegenschaft
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Rohrleitungen(oid itf8)...
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Nummerierungsbereiche(oid itf9)...
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.SelbstRecht
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nummerierungsbereiche.Nummerierungsbereich
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Liegenschaften.SelbstRecht
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nummerierungsbereiche.NBGeometrie
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Gemeindegrenzen(oid itf10)...
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nummerierungsbereiche.NummerierungsbereichPos
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Nummerierungsbereiche.NBGeometrie
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.Hoheitsgrenzpunkt
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.GEMNachfuehrung
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.HoheitsgrenzpunktPos
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.Gemeinde
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Bezirksgrenzen(oid itf11)...
+2014-02-27 07:47:24 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.Gemeindegrenze
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Kantonsgrenzen(oid itf12)...
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Bezirksgrenzen.Bezirksgrenzabschnitt
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Landesgrenzen(oid itf13)...
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Planeinteilungen(oid itf14)...
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Kantonsgrenzen.Kantonsgrenzabschnitt
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Planeinteilungen.Plan
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Planeinteilungen.Plangeometrie
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.TSEinteilung(oid itf15)...
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Planeinteilungen.PlanPos
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.TSEinteilung.Toleranzstufe
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Rutschgebiete(oid itf16)...
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.PLZOrtschaft(oid itf17)...
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Gebaeudeadressen(oid itf18)...
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.TSEinteilung.ToleranzstufePos
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gemeindegrenzen.GEMNachfuehrung
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.Lokalisation
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.GEBNachfuehrung
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.LokalisationsName
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.LokalisationsNamePos
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.GEBNachfuehrung
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.BenanntesGebiet
+2014-02-27 07:47:25 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.Strassenstueck
+2014-02-27 07:47:26 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.Gebaeudeeingang
+2014-02-27 07:47:26 org.catais.importdata.IliReader [DEBUG] DM01AVSO24.Planrahmen(oid itf19)...
+2014-02-27 07:47:26 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Gebaeudeadressen.HausnummerPos
+2014-02-27 07:47:26 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Planrahmen.PlanLayout
+2014-02-27 07:47:26 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Planrahmen.Planbeschriftung
+2014-02-27 07:47:26 org.catais.importdata.IliReader [DEBUG] Add features: DM01AVSO24.Planrahmen.PlanbeschriftungPos
+2014-02-27 07:47:26 org.catais.importdata.IliReader [DEBUG] Committing Transaction...
+2014-02-27 07:47:27 org.catais.importdata.ImportData [INFO] Copying file...
+2014-02-27 07:47:27 org.catais.importdata.ImportData [INFO] File copied: /tmp/261200.itf
+2014-02-27 07:47:27 org.catais.importdata.ImportData [INFO] Zipping file...
+2014-02-27 07:47:27 org.catais.importdata.ImportData [INFO] File zipped: /tmp//261200.zip
+2014-02-27 07:47:27 org.catais.importdata.ImportData [INFO] Import done: 261200.itf
+2014-02-27 07:47:27 org.catais.App [INFO] Filelist with errors: []
+2014-02-27 07:47:27 org.catais.App [INFO] End import.
+2014-02-27 07:47:27 org.catais.App [INFO] Start AV-WMS...
+2014-02-27 07:47:27 org.catais.avwms.Avwms [INFO] AV-WMS: /home/stefan/tmp/av/261200.itf
+2014-02-27 07:47:28 org.catais.avwms.Avwms [INFO] AV-WMS: 2612 commited.
+2014-02-27 07:47:28 org.catais.App [INFO] End AV-WMS.
+2014-02-27 07:47:28 org.catais.App [INFO] End: Thu Feb 27 07:47:28 CET 2014
