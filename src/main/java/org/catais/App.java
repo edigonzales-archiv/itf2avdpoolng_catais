@@ -21,6 +21,7 @@ import org.catais.avwms.Avwms;
 import org.catais.exportdata.ExportData;
 import org.catais.fusion.Fusion;
 import org.catais.geobau.Geobau;
+import org.catais.github.GitHub;
 import org.catais.ili2ch.Convert;
 import org.catais.ili2freeframe.Transform;
 import org.catais.importdata.ImportData;
@@ -77,6 +78,7 @@ public class App
 			boolean doGeobau = (Boolean) params.get("doGeobau");
 			boolean doMopublic = (Boolean) params.get("doMopublic");
 			boolean doCommit2Svn = (Boolean) params.get("doCommit2Svn");
+			boolean doCommit2GitHub = (Boolean) params.get("doCommit2GitHub");
 			boolean doDeleteFiles = (Boolean) params.get("doDeleteFiles");
 			String doVacuum = (String) params.get("vacuum");
 			String doReindex = (String) params.get("reindex");
@@ -90,6 +92,7 @@ public class App
 			logger.info("doGeobau: " + doGeobau);
 			logger.info("doMopublic: " + doMopublic);
 			logger.info("doCommit2Svn: " + doCommit2Svn);
+			logger.info("doCommit2GitHub: " + doCommit2GitHub);
 			logger.info("doDeleteFiles: " + doDeleteFiles);
 			logger.info("doVacuum: " + doVacuum);
 			logger.info("doReindex: " + doReindex);
@@ -238,6 +241,19 @@ public class App
 					logger.error(e.getMessage());
 				}
 				logger.info("End commiting files.");
+			}
+			
+			if (doCommit2GitHub == true) {
+			    logger.info("Start commiting to github...");
+			    try {
+			        GitHub gh = new GitHub("/opt/Geodaten/ch/so/kva/av/dm01avso24/itf/lv03/", "git@github.com:sogeo/DM01AVSO24.git");
+			        gh.commit();
+			        gh.push();
+			        
+			    } catch (Exception e) {
+                    logger.error(e.getMessage());
+                }
+			    logger.info("End commiting to github.");
 			}
 			
 			// Delete files

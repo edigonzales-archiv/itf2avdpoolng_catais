@@ -94,6 +94,13 @@ public class ReadProperties {
 		params.put("doCommit2Svn", doCommit2Svn);
 		logger.debug("doCommit2Svn: " + doCommit2Svn);
 		
+		String doCommit2GitHubProcess = properties.getProperty("commit2github");
+		boolean doCommit2GitHub = false;
+		if (doCommit2GitHubProcess != null) {
+		    doCommit2GitHub = Boolean.parseBoolean(doCommit2GitHubProcess.trim());
+		}
+		params.put("doCommit2GitHub", doCommit2GitHub);
+		
 		String doDeleteFilesProcess = properties.getProperty("deletefiles");
 		boolean doDeleteFiles = false;
 		if (doDeleteFilesProcess != null) {
