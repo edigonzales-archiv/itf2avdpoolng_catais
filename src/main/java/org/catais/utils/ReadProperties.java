@@ -292,11 +292,17 @@ public class ReadProperties {
 		params.put("doFusion", fusion);
 		logger.debug("Fusion: " + fusion);	
 
-    	return params;
-
     	
+    	// Postprocessing
+    	String postprocessingText = properties.getProperty("postprocessing");
+    	boolean postprocessing = false;
+    	if (postprocessingText != null) {
+    	    postprocessing = Boolean.parseBoolean(postprocessingText.trim());
+    	}
+        params.put("doPostprocessing", postprocessing);
+        logger.debug("Postprocessing: " + postprocessing);  
+    	
+        return params;
     }
-    
-
 }
 

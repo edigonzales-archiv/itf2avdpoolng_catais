@@ -28,6 +28,7 @@ import org.catais.importdata.ImportData;
 import org.catais.maintenance.Reindex;
 import org.catais.maintenance.Vacuum;
 import org.catais.mopublic.ExportMopublic;
+import org.catais.postprocessing.PostProcessing;
 import org.catais.svn.Commit2Svn;
 import org.catais.utils.DeleteFiles;
 import org.catais.utils.IOUtils;
@@ -84,6 +85,7 @@ public class App
 			String doReindex = (String) params.get("reindex");
 			boolean doExport = (Boolean) params.get("doExport");
 			boolean doFusion = (Boolean) params.get("doFusion");
+			boolean doPostprocessing = (Boolean) params.get("doPostprocessing");
 			
 			logger.info("doImport: " + doImport);
 			logger.info("doAvwms: " + doAvwms);
@@ -97,7 +99,8 @@ public class App
 			logger.info("doVacuum: " + doVacuum);
 			logger.info("doReindex: " + doReindex);
 			logger.info("doExport: " + doExport);
-			logger.info("doFusion: " + doFusion);
+            logger.info("doFusion: " + doFusion);
+            logger.info("doPostprocessing: " + doPostprocessing);
 
 			
 			// Do the action:
@@ -140,6 +143,24 @@ public class App
 					logger.error(e.getMessage());
 				}
 				logger.info("End AV-WMS.");
+			}
+			
+			// Postprocessing (aka additional tables)
+			if (doPostprocessing == true) {
+			    logger.info("Start postprocessing...");
+			    try {
+			        PostProcessing pp = new PostProcessing(params);
+			        pp.run();
+			        
+			        
+			    } catch (ClassNotFoundException cnfe) {
+                    logger.error(cnfe.getMessage());    
+                } catch (SQLException sqle) {
+                    logger.error(sqle.getMessage());
+                } catch (Exception e) {
+                    logger.error(e.getMessage());
+                }
+	            logger.info("End postprocessing.");
 			}
 			
 			// Vacuum
@@ -243,6 +264,7 @@ public class App
 				logger.info("End commiting files.");
 			}
 			
+			// Commit to github
 			if (doCommit2GitHub == true) {
 			    logger.info("Start commiting to github...");
 			    try {
