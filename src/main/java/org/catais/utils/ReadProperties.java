@@ -301,6 +301,15 @@ public class ReadProperties {
     	}
         params.put("doPostprocessing", postprocessing);
         logger.debug("Postprocessing: " + postprocessing);  
+        
+        // Postprocessing
+        String updateAddressesText = properties.getProperty("updateaddresses");
+        boolean updateaddresses = false;
+        if (updateAddressesText != null) {
+            updateaddresses = Boolean.parseBoolean(updateAddressesText.trim());
+        }
+        params.put("doUpdateAddresses", updateaddresses);
+        logger.debug("UpdateAddresses: " + updateaddresses);          
     	
         return params;
     }

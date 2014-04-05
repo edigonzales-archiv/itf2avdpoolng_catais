@@ -17,6 +17,7 @@ import java.util.Properties;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.catais.addresses.UpdateAddresses;
 import org.catais.avwms.Avwms;
 import org.catais.exportdata.ExportData;
 import org.catais.fusion.Fusion;
@@ -85,7 +86,8 @@ public class App
 			String doReindex = (String) params.get("reindex");
 			boolean doExport = (Boolean) params.get("doExport");
 			boolean doFusion = (Boolean) params.get("doFusion");
-			boolean doPostprocessing = (Boolean) params.get("doPostprocessing");
+            boolean doPostprocessing = (Boolean) params.get("doPostprocessing");
+            boolean doUpdateAddresses = (Boolean) params.get("doUpdateAddresses");
 			
 			logger.info("doImport: " + doImport);
 			logger.info("doAvwms: " + doAvwms);
@@ -101,6 +103,7 @@ public class App
 			logger.info("doExport: " + doExport);
             logger.info("doFusion: " + doFusion);
             logger.info("doPostprocessing: " + doPostprocessing);
+            logger.info("doUpdateAddresses: " + doUpdateAddresses);
 
 			
 			// Do the action:
@@ -150,9 +153,7 @@ public class App
 			    logger.info("Start postprocessing...");
 			    try {
 			        PostProcessing pp = new PostProcessing(params);
-			        pp.run();
-			        
-			        
+			        pp.run();		        
 			    } catch (ClassNotFoundException cnfe) {
                     logger.error(cnfe.getMessage());    
                 } catch (SQLException sqle) {
@@ -162,6 +163,22 @@ public class App
                 }
 	            logger.info("End postprocessing.");
 			}
+			
+            // Update Addresses Tables
+            if (doUpdateAddresses == true) {
+                logger.info("Start update addresses...");
+                try {
+                    UpdateAddresses update = new UpdateAddresses(params);
+                    update.run();               
+                } catch (ClassNotFoundException cnfe) {
+                    logger.error(cnfe.getMessage());    
+                } catch (SQLException sqle) {
+                    logger.error(sqle.getMessage());
+                } catch (Exception e) {
+                    logger.error(e.getMessage());
+                }
+                logger.info("End update addresses.");
+            }			
 			
 			// Vacuum
 			if (doVacuum != null) {

@@ -62,7 +62,7 @@ public class PostProcessing {
 
         if (itfFileList != null) {
             for(String f : itfFileList) {
-                logger.info("AV-WMS: " + dir.getAbsolutePath() + dir.separator + f);
+                logger.info("PostProcessing: " + dir.getAbsolutePath() + dir.separator + f);
 
                 LinkedHashMap additionalAttributes = new LinkedHashMap();
                 try {                
