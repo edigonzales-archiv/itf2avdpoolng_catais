@@ -39,14 +39,15 @@ public class SearchTables {
 
     private String sql = "DELETE FROM av_gebaeudeadressen.searchtable WHERE bfsnr = ___GEM_BFS;\n" + 
     		"\n" + 
-    		"INSERT INTO av_gebaeudeadressen.searchtable(searchstring, displaytext, search_category, the_geom, geometry_type, searchstring_tsvector)\n" + 
+    		"INSERT INTO av_gebaeudeadressen.searchtable(searchstring, displaytext, search_category, the_geom, geometry_type, searchstring_tsvector, bfsnr)\n" + 
     		"SELECT lower(geb.lokalisationsname || ' ' || geb.hausnummer || ' ' || geb.plz || ' ' || geb.ortschaftsname || ' ' || gem.bfsnr || ' ' || gem.\"name\") as searchstring,\n" + 
     		"       CASE WHEN gueltigkeit = 'projektiert' THEN geb.lokalisationsname || ' ' || geb.hausnummer || ', ' || geb.plz || ' ' || geb.ortschaftsname  || ' (projektiert)'\n" + 
     		"       ELSE geb.lokalisationsname || ' ' || geb.hausnummer || ', ' || geb.plz || ' ' || geb.ortschaftsname END as displaytext,\n" + 
     		"       '01_addresses'::text as search_category,\n" + 
     		"       geb.lage as the_geom,\n" + 
     		"       'POINT'::text as geometry_type,\n" + 
-    		"       to_tsvector(lower(geb.lokalisationsname || ' ' || geb.hausnummer || ' ' || geb.plz || ' ' || geb.ortschaftsname || ' ' || gem.bfsnr || ' ' || gem.\"name\")) as searchstring_tsvector\n" + 
+    		"       to_tsvector('finnish', lower(geb.lokalisationsname || ' ' || geb.hausnummer || ' ' || geb.plz || ' ' || geb.ortschaftsname || ' ' || gem.bfsnr || ' ' || gem.\"name\")) as searchstring_tsvector,\n" +
+    		"       geb.bfsnr\n" +
     		"       \n" + 
     		"FROM av_gebaeudeadressen.gebaeudeadressen__gebaeudeeingang as geb, av_avdpool_ng.gemeindegrenzen_gemeinde as gem\n" + 
     		"WHERE geb.bfsnr = ___GEM_BFS AND gem.bfsnr = ___GEM_BFS\n" + 
