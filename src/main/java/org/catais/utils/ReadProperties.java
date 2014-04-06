@@ -302,14 +302,23 @@ public class ReadProperties {
         params.put("doPostprocessing", postprocessing);
         logger.debug("Postprocessing: " + postprocessing);  
         
-        // Postprocessing
+        // Addresses
         String updateAddressesText = properties.getProperty("updateaddresses");
         boolean updateaddresses = false;
         if (updateAddressesText != null) {
             updateaddresses = Boolean.parseBoolean(updateAddressesText.trim());
         }
         params.put("doUpdateAddresses", updateaddresses);
-        logger.debug("UpdateAddresses: " + updateaddresses);          
+        logger.debug("UpdateAddresses: " + updateaddresses);       
+        
+        // SearchTables
+        String updateSearchTablesText = properties.getProperty("updatesearchtables");
+        boolean updatesearchtables = false;
+        if (updateSearchTablesText != null) {
+            updatesearchtables = Boolean.parseBoolean(updateSearchTablesText.trim());
+        }
+        params.put("doUpdateSearchTables", updatesearchtables);
+        logger.debug("UpdateSearchTables: " + updatesearchtables);     
     	
         return params;
     }

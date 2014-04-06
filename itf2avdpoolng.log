@@ -1,239 +1,240 @@
-2014-04-05 21:44:32 org.catais.App [INFO] Start: Sat Apr 05 21:44:32 CEST 2014
-2014-04-05 21:44:32 org.catais.App [DEBUG] Properties filename: itf2avdpoolng.properties
-2014-04-05 21:44:32 org.catais.App [DEBUG] {port=5432, doCommit2Svn=false, importSourceDir=/home/stefan/tmp/av/, host=localhost, doDeleteFiles=false, renumberTid=true, doExport=false, doIli2freeframe=false, doImport=false, enumText=true, doGeobau=false, doCommit2GitHub=false, schema=av_avdpool_ng, addAttr=true, pwd=ziegler12, mopublicBaseDir=/tmp/mopublic/, doPostprocessing=false, ili2chModelName=DM01AVCH24D, geobauDir=/tmp/, doMopublic=false, dbname=rosebud2, doFusion=false, ili2chDir=/tmp/, importDestinationDir=/stefan/tmp/av_git/DM01TEST/, doUpdateAddresses=true, user=stefan, doIli2ch=false, importModelName=DM01AVSO24}
-2014-04-05 21:44:32 org.catais.App [INFO] doImport: false
-2014-04-05 21:44:32 org.catais.App [INFO] doAvwms: null
-2014-04-05 21:44:32 org.catais.App [INFO] doIli2ch: false
-2014-04-05 21:44:32 org.catais.App [INFO] doIli2freeframe: false
-2014-04-05 21:44:32 org.catais.App [INFO] doGeobau: false
-2014-04-05 21:44:32 org.catais.App [INFO] doMopublic: false
-2014-04-05 21:44:32 org.catais.App [INFO] doCommit2Svn: false
-2014-04-05 21:44:32 org.catais.App [INFO] doCommit2GitHub: false
-2014-04-05 21:44:32 org.catais.App [INFO] doDeleteFiles: false
-2014-04-05 21:44:32 org.catais.App [INFO] doVacuum: null
-2014-04-05 21:44:32 org.catais.App [INFO] doReindex: null
-2014-04-05 21:44:32 org.catais.App [INFO] doExport: false
-2014-04-05 21:44:32 org.catais.App [INFO] doFusion: false
-2014-04-05 21:44:32 org.catais.App [INFO] doPostprocessing: false
-2014-04-05 21:44:32 org.catais.App [INFO] doUpdateAddresses: true
-2014-04-05 21:44:32 org.catais.App [INFO] Start update addresses...
-2014-04-05 21:44:32 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/250300.itf
-2014-04-05 21:44:37 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2503 commited.
-2014-04-05 21:44:37 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/242500.itf
-2014-04-05 21:44:38 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2425 commited.
-2014-04-05 21:44:38 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/253000.itf
-2014-04-05 21:44:41 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2530 commited.
-2014-04-05 21:44:41 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/246100.itf
-2014-04-05 21:44:48 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2461 commited.
-2014-04-05 21:44:48 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/258400.itf
-2014-04-05 21:44:49 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2584 commited.
-2014-04-05 21:44:49 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/250000.itf
-2014-04-05 21:44:55 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2500 commited.
-2014-04-05 21:44:55 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/242900.itf
-2014-04-05 21:44:57 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2429 commited.
-2014-04-05 21:44:57 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/247400.itf
-2014-04-05 21:44:59 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2474 commited.
-2014-04-05 21:44:59 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/261600.itf
-2014-04-05 21:45:00 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2616 commited.
-2014-04-05 21:45:00 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/257300.itf
-2014-04-05 21:45:06 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2573 commited.
-2014-04-05 21:45:06 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/261800.itf
-2014-04-05 21:45:07 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2618 commited.
-2014-04-05 21:45:07 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/257200.itf
-2014-04-05 21:45:12 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2572 commited.
-2014-04-05 21:45:12 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/249700.itf
-2014-04-05 21:45:16 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2497 commited.
-2014-04-05 21:45:16 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/255300.itf
-2014-04-05 21:45:19 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2553 commited.
-2014-04-05 21:45:19 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/254300.itf
-2014-04-05 21:45:24 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2543 commited.
-2014-04-05 21:45:24 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/257500.itf
-2014-04-05 21:45:26 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2575 commited.
-2014-04-05 21:45:26 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/248100.itf
-2014-04-05 21:45:29 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2481 commited.
-2014-04-05 21:45:29 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/261700.itf
-2014-04-05 21:45:30 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2617 commited.
-2014-04-05 21:45:30 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/253200.itf
-2014-04-05 21:45:33 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2532 commited.
-2014-04-05 21:45:33 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/254400.itf
-2014-04-05 21:45:34 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2544 commited.
-2014-04-05 21:45:34 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/247600.itf
-2014-04-05 21:45:39 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2476 commited.
-2014-04-05 21:45:39 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/247100.itf
-2014-04-05 21:45:40 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2471 commited.
-2014-04-05 21:45:40 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/255000.itf
-2014-04-05 21:45:45 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2550 commited.
-2014-04-05 21:45:45 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/258000.itf
-2014-04-05 21:45:49 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2580 commited.
-2014-04-05 21:45:49 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/254800.itf
-2014-04-05 21:45:50 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2548 commited.
-2014-04-05 21:45:50 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/258200.itf
-2014-04-05 21:45:52 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2582 commited.
-2014-04-05 21:45:52 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/252800.itf
-2014-04-05 21:45:54 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2528 commited.
-2014-04-05 21:45:54 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/240500.itf
-2014-04-05 21:45:56 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2405 commited.
-2014-04-05 21:45:56 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/252600.itf
-2014-04-05 21:46:01 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2526 commited.
-2014-04-05 21:46:01 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/249900.itf
-2014-04-05 21:46:02 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2499 commited.
-2014-04-05 21:46:02 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/251400.itf
-2014-04-05 21:46:03 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2514 commited.
-2014-04-05 21:46:03 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/254900.itf
-2014-04-05 21:46:03 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2549 commited.
-2014-04-05 21:46:03 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/246400.itf
-2014-04-05 21:46:05 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2464 commited.
-2014-04-05 21:46:05 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/240400.itf
-2014-04-05 21:46:08 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2404 commited.
-2014-04-05 21:46:08 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/252400.itf
-2014-04-05 21:46:08 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2524 commited.
-2014-04-05 21:46:08 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/240100.itf
-2014-04-05 21:46:12 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2401 commited.
-2014-04-05 21:46:12 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/242400.itf
-2014-04-05 21:46:12 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2424 commited.
-2014-04-05 21:46:12 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/249100.itf
-2014-04-05 21:46:14 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2491 commited.
-2014-04-05 21:46:14 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/258600.itf
-2014-04-05 21:46:20 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2586 commited.
-2014-04-05 21:46:20 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/258500.itf
-2014-04-05 21:46:21 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2585 commited.
-2014-04-05 21:46:21 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/240300.itf
-2014-04-05 21:46:24 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2403 commited.
-2014-04-05 21:46:24 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/252500.itf
-2014-04-05 21:46:26 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2525 commited.
-2014-04-05 21:46:26 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/246500.itf
-2014-04-05 21:46:31 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2465 commited.
-2014-04-05 21:46:31 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/255100.itf
-2014-04-05 21:46:34 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2551 commited.
-2014-04-05 21:46:34 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/247200.itf
-2014-04-05 21:46:35 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2472 commited.
-2014-04-05 21:46:35 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/251300.itf
-2014-04-05 21:46:46 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2513 commited.
-2014-04-05 21:46:46 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/251900.itf
-2014-04-05 21:46:52 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2519 commited.
-2014-04-05 21:46:52 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/249800.itf
-2014-04-05 21:46:52 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2498 commited.
-2014-04-05 21:46:52 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/257400.itf
-2014-04-05 21:46:53 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2574 commited.
-2014-04-05 21:46:53 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/261300.itf
-2014-04-05 21:46:57 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2613 commited.
-2014-04-05 21:46:57 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/261400.itf
-2014-04-05 21:47:01 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2614 commited.
-2014-04-05 21:47:01 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/242200.itf
-2014-04-05 21:47:08 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2422 commited.
-2014-04-05 21:47:08 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/255600.itf
-2014-04-05 21:47:13 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2556 commited.
-2014-04-05 21:47:13 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/251600.itf
-2014-04-05 21:47:16 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2516 commited.
-2014-04-05 21:47:16 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/254600.itf
-2014-04-05 21:47:19 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2546 commited.
-2014-04-05 21:47:19 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/245600.itf
-2014-04-05 21:47:20 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2456 commited.
-2014-04-05 21:47:20 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/240200.itf
-2014-04-05 21:47:22 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2402 commited.
-2014-04-05 21:47:22 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/262200.itf
-2014-04-05 21:47:24 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2622 commited.
-2014-04-05 21:47:24 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/260100.itf
-2014-04-05 21:47:42 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2601 commited.
-2014-04-05 21:47:42 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/253400.itf
-2014-04-05 21:47:50 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2534 commited.
-2014-04-05 21:47:50 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/252700.itf
-2014-04-05 21:47:55 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2527 commited.
-2014-04-05 21:47:55 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/261900.itf
-2014-04-05 21:47:56 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2619 commited.
-2014-04-05 21:47:56 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/250200.itf
-2014-04-05 21:47:57 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2502 commited.
-2014-04-05 21:47:57 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/254100.itf
-2014-04-05 21:47:58 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2541 commited.
-2014-04-05 21:47:58 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/262100.itf
-2014-04-05 21:48:01 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2621 commited.
-2014-04-05 21:48:01 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/240700.itf
-2014-04-05 21:48:06 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2407 commited.
-2014-04-05 21:48:06 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/250100.itf
-2014-04-05 21:48:09 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2501 commited.
-2014-04-05 21:48:09 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/242700.itf
-2014-04-05 21:48:11 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2427 commited.
-2014-04-05 21:48:11 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/252300.itf
-2014-04-05 21:48:12 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2523 commited.
-2014-04-05 21:48:12 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/261200.itf
-2014-04-05 21:48:13 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2612 commited.
-2014-04-05 21:48:13 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/254700.itf
-2014-04-05 21:48:16 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2547 commited.
-2014-04-05 21:48:16 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/257100.itf
-2014-04-05 21:48:17 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2571 commited.
-2014-04-05 21:48:17 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/262000.itf
-2014-04-05 21:48:18 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2620 commited.
-2014-04-05 21:48:18 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/257600.itf
-2014-04-05 21:48:22 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2576 commited.
-2014-04-05 21:48:22 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/251700.itf
-2014-04-05 21:48:28 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2517 commited.
-2014-04-05 21:48:28 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/252900.itf
-2014-04-05 21:48:29 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2529 commited.
-2014-04-05 21:48:29 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/251800.itf
-2014-04-05 21:48:30 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2518 commited.
-2014-04-05 21:48:30 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/254200.itf
-2014-04-05 21:48:36 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2542 commited.
-2014-04-05 21:48:36 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/255500.itf
-2014-04-05 21:48:38 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2555 commited.
-2014-04-05 21:48:38 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/246300.itf
-2014-04-05 21:48:38 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2463 commited.
-2014-04-05 21:48:38 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/255400.itf
-2014-04-05 21:48:41 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2554 commited.
-2014-04-05 21:48:41 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/249300.itf
-2014-04-05 21:48:47 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2493 commited.
-2014-04-05 21:48:47 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/257800.itf
-2014-04-05 21:48:50 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2578 commited.
-2014-04-05 21:48:50 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/242100.itf
-2014-04-05 21:48:51 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2421 commited.
-2014-04-05 21:48:51 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/240600.itf
-2014-04-05 21:48:53 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2406 commited.
-2014-04-05 21:48:53 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/247800.itf
-2014-04-05 21:48:56 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2478 commited.
-2014-04-05 21:48:56 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/261500.itf
-2014-04-05 21:48:57 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2615 commited.
-2014-04-05 21:48:57 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/251100.itf
-2014-04-05 21:49:00 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2511 commited.
-2014-04-05 21:49:00 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/261100.itf
-2014-04-05 21:49:02 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2611 commited.
-2014-04-05 21:49:02 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/245500.itf
-2014-04-05 21:49:04 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2455 commited.
-2014-04-05 21:49:04 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/258100.itf
-2014-04-05 21:49:20 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2581 commited.
-2014-04-05 21:49:20 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/254500.itf
-2014-04-05 21:49:22 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2545 commited.
-2014-04-05 21:49:22 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/258300.itf
-2014-04-05 21:49:27 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2583 commited.
-2014-04-05 21:49:27 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/249200.itf
-2014-04-05 21:49:28 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2492 commited.
-2014-04-05 21:49:28 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/248000.itf
-2014-04-05 21:49:30 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2480 commited.
-2014-04-05 21:49:30 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/242600.itf
-2014-04-05 21:49:34 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2426 commited.
-2014-04-05 21:49:34 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/240800.itf
-2014-04-05 21:49:38 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2408 commited.
-2014-04-05 21:49:38 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/247900.itf
-2014-04-05 21:49:40 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2479 commited.
-2014-04-05 21:49:40 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/252000.itf
-2014-04-05 21:49:41 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2520 commited.
-2014-04-05 21:49:41 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/245700.itf
-2014-04-05 21:49:44 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2457 commited.
-2014-04-05 21:49:44 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/244500.itf
-2014-04-05 21:49:45 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2445 commited.
-2014-04-05 21:49:45 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/247300.itf
-2014-04-05 21:49:52 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2473 commited.
-2014-04-05 21:49:52 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/249500.itf
-2014-04-05 21:49:57 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2495 commited.
-2014-04-05 21:49:57 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/242300.itf
-2014-04-05 21:49:57 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2423 commited.
-2014-04-05 21:49:57 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/247700.itf
-2014-04-05 21:49:59 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2477 commited.
-2014-04-05 21:49:59 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/257900.itf
-2014-04-05 21:50:05 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2579 commited.
-2014-04-05 21:50:05 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/247500.itf
-2014-04-05 21:50:07 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2475 commited.
-2014-04-05 21:50:07 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/242800.itf
-2014-04-05 21:50:12 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2428 commited.
-2014-04-05 21:50:12 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: /home/stefan/tmp/av/253500.itf
-2014-04-05 21:50:13 org.catais.addresses.UpdateAddresses [INFO] UpdateAddresses: 2535 commited.
-2014-04-05 21:50:13 org.catais.App [INFO] End update addresses.
-2014-04-05 21:50:13 org.catais.App [INFO] End: Sat Apr 05 21:50:13 CEST 2014
+2014-04-06 13:26:36 org.catais.App [INFO] Start: Sun Apr 06 13:26:36 CEST 2014
+2014-04-06 13:26:36 org.catais.App [DEBUG] Properties filename: itf2avdpoolng.properties
+2014-04-06 13:26:36 org.catais.App [DEBUG] {port=5432, doDeleteFiles=false, doExport=false, schema=av_avdpool_ng, mopublicBaseDir=/tmp/mopublic/, doPostprocessing=false, geobauDir=/tmp/, doUpdateSearchTables=true, importDestinationDir=/stefan/tmp/av_git/DM01TEST/, doUpdateAddresses=false, importModelName=DM01AVSO24, importSourceDir=/home/stefan/tmp/av/, doCommit2Svn=false, host=localhost, renumberTid=true, doIli2freeframe=false, doImport=false, enumText=true, doGeobau=false, doCommit2GitHub=false, addAttr=true, pwd=ziegler12, ili2chModelName=DM01AVCH24D, doMopublic=false, dbname=rosebud2, doFusion=false, ili2chDir=/tmp/, user=stefan, doIli2ch=false}
+2014-04-06 13:26:36 org.catais.App [INFO] doImport: false
+2014-04-06 13:26:36 org.catais.App [INFO] doAvwms: null
+2014-04-06 13:26:36 org.catais.App [INFO] doIli2ch: false
+2014-04-06 13:26:36 org.catais.App [INFO] doIli2freeframe: false
+2014-04-06 13:26:36 org.catais.App [INFO] doGeobau: false
+2014-04-06 13:26:36 org.catais.App [INFO] doMopublic: false
+2014-04-06 13:26:36 org.catais.App [INFO] doCommit2Svn: false
+2014-04-06 13:26:36 org.catais.App [INFO] doCommit2GitHub: false
+2014-04-06 13:26:36 org.catais.App [INFO] doDeleteFiles: false
+2014-04-06 13:26:36 org.catais.App [INFO] doVacuum: null
+2014-04-06 13:26:36 org.catais.App [INFO] doReindex: null
+2014-04-06 13:26:36 org.catais.App [INFO] doExport: false
+2014-04-06 13:26:36 org.catais.App [INFO] doFusion: false
+2014-04-06 13:26:36 org.catais.App [INFO] doPostprocessing: false
+2014-04-06 13:26:36 org.catais.App [INFO] doUpdateAddresses: false
+2014-04-06 13:26:36 org.catais.App [INFO] doUpdateSearchTables: true
+2014-04-06 13:26:36 org.catais.App [INFO] Start update search tables...
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/250300.itf
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: 2503 commited.
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/242500.itf
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: 2425 commited.
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/253000.itf
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: 2530 commited.
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/246100.itf
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: 2461 commited.
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/258400.itf
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: 2584 commited.
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/250000.itf
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: 2500 commited.
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/242900.itf
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: 2429 commited.
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/247400.itf
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: 2474 commited.
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/261600.itf
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: 2616 commited.
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/257300.itf
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: 2573 commited.
+2014-04-06 13:26:36 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/261800.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2618 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/257200.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2572 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/249700.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2497 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/255300.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2553 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/254300.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2543 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/257500.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2575 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/248100.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2481 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/261700.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2617 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/253200.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2532 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/254400.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2544 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/247600.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2476 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/247100.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2471 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/255000.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2550 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/258000.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2580 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/254800.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2548 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/258200.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2582 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/252800.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2528 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/240500.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2405 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/252600.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2526 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/249900.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2499 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/251400.itf
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: 2514 commited.
+2014-04-06 13:26:37 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/254900.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2549 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/246400.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2464 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/240400.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2404 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/252400.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2524 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/240100.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2401 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/242400.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2424 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/249100.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2491 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/258600.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2586 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/258500.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2585 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/240300.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2403 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/252500.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2525 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/246500.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2465 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/255100.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2551 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/247200.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2472 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/251300.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2513 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/251900.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2519 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/249800.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2498 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/257400.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2574 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/261300.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2613 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/261400.itf
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: 2614 commited.
+2014-04-06 13:26:38 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/242200.itf
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: 2422 commited.
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/255600.itf
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: 2556 commited.
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/251600.itf
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: 2516 commited.
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/254600.itf
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: 2546 commited.
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/245600.itf
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: 2456 commited.
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/240200.itf
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: 2402 commited.
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/262200.itf
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: 2622 commited.
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/260100.itf
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: 2601 commited.
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/253400.itf
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: 2534 commited.
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/252700.itf
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: 2527 commited.
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/261900.itf
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: 2619 commited.
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/250200.itf
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: 2502 commited.
+2014-04-06 13:26:39 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/254100.itf
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: 2541 commited.
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/262100.itf
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: 2621 commited.
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/240700.itf
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: 2407 commited.
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/250100.itf
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: 2501 commited.
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/242700.itf
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: 2427 commited.
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/252300.itf
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: 2523 commited.
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/261200.itf
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: 2612 commited.
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/254700.itf
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: 2547 commited.
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/257100.itf
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: 2571 commited.
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/262000.itf
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: 2620 commited.
+2014-04-06 13:26:40 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/257600.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2576 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/251700.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2517 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/252900.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2529 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/251800.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2518 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/254200.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2542 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/255500.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2555 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/246300.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2463 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/255400.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2554 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/249300.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2493 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/257800.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2578 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/242100.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2421 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/240600.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2406 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/247800.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2478 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/261500.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2615 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/251100.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2511 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/261100.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2611 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/245500.itf
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: 2455 commited.
+2014-04-06 13:26:41 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/258100.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2581 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/254500.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2545 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/258300.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2583 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/249200.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2492 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/248000.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2480 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/242600.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2426 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/240800.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2408 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/247900.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2479 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/252000.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2520 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/245700.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2457 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/244500.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2445 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/247300.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2473 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/249500.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2495 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/242300.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2423 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/247700.itf
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: 2477 commited.
+2014-04-06 13:26:42 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/257900.itf
+2014-04-06 13:26:43 org.catais.searchtables.SearchTables [INFO] SearchTables: 2579 commited.
+2014-04-06 13:26:43 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/247500.itf
+2014-04-06 13:26:43 org.catais.searchtables.SearchTables [INFO] SearchTables: 2475 commited.
+2014-04-06 13:26:43 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/242800.itf
+2014-04-06 13:26:43 org.catais.searchtables.SearchTables [INFO] SearchTables: 2428 commited.
+2014-04-06 13:26:43 org.catais.searchtables.SearchTables [INFO] SearchTables: /home/stefan/tmp/av/253500.itf
+2014-04-06 13:26:43 org.catais.searchtables.SearchTables [INFO] SearchTables: 2535 commited.
+2014-04-06 13:26:43 org.catais.App [INFO] End update search tables.
+2014-04-06 13:26:43 org.catais.App [INFO] End: Sun Apr 06 13:26:43 CEST 2014

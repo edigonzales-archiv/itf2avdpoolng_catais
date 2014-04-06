@@ -30,6 +30,7 @@ import org.catais.maintenance.Reindex;
 import org.catais.maintenance.Vacuum;
 import org.catais.mopublic.ExportMopublic;
 import org.catais.postprocessing.PostProcessing;
+import org.catais.searchtables.SearchTables;
 import org.catais.svn.Commit2Svn;
 import org.catais.utils.DeleteFiles;
 import org.catais.utils.IOUtils;
@@ -88,6 +89,7 @@ public class App
 			boolean doFusion = (Boolean) params.get("doFusion");
             boolean doPostprocessing = (Boolean) params.get("doPostprocessing");
             boolean doUpdateAddresses = (Boolean) params.get("doUpdateAddresses");
+            boolean doUpdateSearchTables = (Boolean) params.get("doUpdateSearchTables");
 			
 			logger.info("doImport: " + doImport);
 			logger.info("doAvwms: " + doAvwms);
@@ -104,6 +106,7 @@ public class App
             logger.info("doFusion: " + doFusion);
             logger.info("doPostprocessing: " + doPostprocessing);
             logger.info("doUpdateAddresses: " + doUpdateAddresses);
+            logger.info("doUpdateSearchTables: " + doUpdateSearchTables);
 
 			
 			// Do the action:
@@ -165,6 +168,22 @@ public class App
 			}
 			
             // Update Addresses Tables
+            if (doUpdateSearchTables == true) {
+                logger.info("Start update search tables...");
+                try {
+                    SearchTables searchTables = new SearchTables(params);
+                    searchTables.update();               
+                } catch (ClassNotFoundException cnfe) {
+                    logger.error(cnfe.getMessage());    
+                } catch (SQLException sqle) {
+                    logger.error(sqle.getMessage());
+                } catch (Exception e) {
+                    logger.error(e.getMessage());
+                }
+                logger.info("End update search tables.");
+            }			
+            
+            // Update Search Tables
             if (doUpdateAddresses == true) {
                 logger.info("Start update addresses...");
                 try {
@@ -178,7 +197,7 @@ public class App
                     logger.error(e.getMessage());
                 }
                 logger.info("End update addresses.");
-            }			
+            }                   
 			
 			// Vacuum
 			if (doVacuum != null) {
