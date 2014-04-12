@@ -72,7 +72,7 @@ public class PostProcessing {
                     s = conn.createStatement();
 
                     ResultSet rs = null;
-                    rs = s.executeQuery("SELECT * FROM " + this.schema + "." + this.sqlTable + ";");
+                    rs = s.executeQuery("SELECT * FROM " + this.schema + "." + this.sqlTable + " ORDER BY ogc_fid;");
 
                     queries.clear();
                     tables.clear();
@@ -99,11 +99,12 @@ public class PostProcessing {
 
                             String table = (String) tables.get(i);
 
-                            String sqlDelete = "DELETE FROM " + this.schema + "." + table + " WHERE gem_bfs = " + gem_bfs + ";";
-                            String sqlInsert = (String) queries.get(i);                         
+                            // Steht jetzt in der Query selbst. Sonst gehen normale Updates nicht...
+                            //String sqlDelete = "DELETE FROM " + this.schema + "." + table + " WHERE gem_bfs = " + gem_bfs + ";";
+                            String sqlUpdate = (String) queries.get(i);                         
 
-                            t.executeUpdate(sqlDelete);
-                            t.executeUpdate(sqlInsert);
+                            //t.executeUpdate(sqlDelete);
+                            t.executeUpdate(sqlUpdate);
                             logger.debug(table);
                         }
 
