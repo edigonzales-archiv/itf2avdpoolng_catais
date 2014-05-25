@@ -110,12 +110,12 @@ public class ImportDataAVGeoPortal {
                     reader.compileModel();
                     //reader.setTidPrefix(f.substring(8, 12) + f.substring(13, 14));
                     //reader.setTidPrefix(f.substring(3, 7) + f.substring(8, 9));
-                    reader.setTidPrefix(f.substring(0, 4) + f.substring(4, 6)); 
+                    reader.setTidPrefix(f.substring(6, 10) + f.substring(12, 13)); 
                     reader.startTransaction();
                     reader.delete();
                     File sourceFile = new File(dir.getAbsolutePath() + dir.separator + f);
                     reader.read(sourceFile.getAbsolutePath(), renumberTid, false);
-                    reader.commitTransaction();
+                    //reader.commitTransaction();
                     
                     if (importDestinationDir != null) {
                         logger.info("Copying file...");
