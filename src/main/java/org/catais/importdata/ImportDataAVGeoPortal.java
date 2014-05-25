@@ -115,7 +115,7 @@ public class ImportDataAVGeoPortal {
                     reader.delete();
                     File sourceFile = new File(dir.getAbsolutePath() + dir.separator + f);
                     reader.read(sourceFile.getAbsolutePath(), renumberTid, false);
-                    //reader.commitTransaction();
+                    reader.commitTransaction();
                     
                     if (importDestinationDir != null) {
                         logger.info("Copying file...");
