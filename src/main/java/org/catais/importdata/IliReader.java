@@ -687,7 +687,13 @@ public class IliReader {
 			    if (!found) {
 //	                logger.warn("Should not reach here:");
 //	                logger.warn(p.toString());
-	                smallAreas.add(p);
+			        
+			        // Falls wirklich bewusste Löcher im Datensatz sind, führt das zu falschen 
+			        // Resultaten (siehe Einsiedeln). Nur zu den smallAreas hinzufügen, falls kleiner
+			        // als ein bestimmter Wert.
+			        if (p.getArea() < 1.0) {
+	                    smallAreas.add(p);
+			        }
 			    }
 			}
 			
