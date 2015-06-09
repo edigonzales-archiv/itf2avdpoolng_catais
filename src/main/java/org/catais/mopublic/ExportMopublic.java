@@ -68,15 +68,17 @@ public class ExportMopublic {
 					logger.error(e.getMessage());
 				}
     		}
-    		if (itfFileList.length > 0) {
+//            if (itfFileList.length > 0) {
+    		if (true) {
 				try {
-					logger.debug("MOpublic ganzer Kanton LV03");
+					logger.info("MOpublic ganzer Kanton LV03");
 	
 					String[] topics = {"Control_points", "Land_cover", "Single_objects", "Heights", "Local_names", "Ownership", "Pipelines", "Territorial_boundaries", "Building_addresses"};
 					MOpublic mopublic = new MOpublic(params);
 					mopublic.write("kanton", "d", topics, "shp", "LV03");
 					
-                    logger.debug("MOpublic ganzer Kanton LV95");
+                    logger.info("MOpublic ganzer Kanton LV95");
+                    mopublic = new MOpublic(params);
                     mopublic.write("kanton", "d", topics, "shp", "LV95");
 
 					
