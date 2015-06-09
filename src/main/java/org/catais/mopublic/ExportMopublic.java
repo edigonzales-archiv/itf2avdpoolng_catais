@@ -68,8 +68,8 @@ public class ExportMopublic {
 					logger.error(e.getMessage());
 				}
     		}
-//            if (itfFileList.length > 0) {
-    		if (true) {
+    		if (itfFileList.length > 0) {
+//    		if (true) {
 				try {
 					logger.info("MOpublic ganzer Kanton LV03");
 	
